@@ -1,209 +1,1072 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/weui.css">
-    <link rel="stylesheet" href="css/main_phone.css">
-    <title>Document</title>
+<title> by www.dede58.com</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="order by dede58.com" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="/dede58/img/favicon.png">
+<link rel="apple-touch-icon" href="/dede58/img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/dede58/img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/dede58/img/apple-touch-icon-114x114.png">
+
+<!-- Load Core CSS 
+        =====================================-->
+<link rel="stylesheet" href="/dede58/css/core/bootstrap.min.css">
+<link rel="stylesheet" href="/dede58/css/core/animate.min.css">
+<link rel="stylesheet" href="/dede58/css/demo.css">
+
+<!-- Load Main CSS 
+        =====================================-->
+<link rel="stylesheet" href="/dede58/css/main/main.min.css">
+
+<!-- Load Magnific Popup CSS 
+        =====================================-->
+<link rel="stylesheet" href="/dede58/css/magnific/magic.min.css">
+<link rel="stylesheet" href="/dede58/css/magnific/magnific-popup.css">
+<link rel="stylesheet" href="/dede58/css/magnific/magnific-popup-zoom-gallery.css">
+
+<!-- Load OWL Carousel CSS 
+        =====================================-->
+<link rel="stylesheet" href="/dede58/css/owl-carousel/owl.carousel.css">
+<link rel="stylesheet" href="/dede58/css/owl-carousel/owl.theme.css">
+<link rel="stylesheet" href="/dede58/css/owl-carousel/owl.transitions.css">
+<link rel="stylesheet" href="/dede58/css/color/pasific.css">
+<link rel="stylesheet" href="/dede58/css/icon/font-awesome.css">
+<link rel="stylesheet" href="/dede58/css/icon/et-line-font.css">
+
+<!-- Load JS
+        HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+        WARNING: Respond.js doesn't work if you view the page via file://
+        =====================================-->
+
+<!--[if lt IE 9]>
+          <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
 </head>
-<body>
-     <!-- plate-bg -->
-    <div class="plate-bg">
-        <!-- plate -->
-        <div class="plate" id="app"  >
-            <!-- plate-header -->
-            <div class="plate-header">
-                <!-- plate-tit -->
-                <div class="plate-tit">
-                    <h3>请输入车牌号</h3>
-                    <i class="weui-icon-cancel"></i>
-                </div> 
-                 <!-- plate-input-bg -->
-                <div class="plate-input-bg" :class="{'plate-input-news':isNew}">
-                    <div class="plate-input">
-                        <dl class="dot">·</dl>
-                        <dl v-for="item in plateArr" v-text="item"></dl>
-                    </div>
-                    <div class="plate-input-border">
-                        <dl v-for="item in plateArrBorder" v-text="item"></dl>
-                    </div>
-                </div>
-                 <!-- plate-input-bg -->
-            </div>
-            <!-- /plate-header -->
-            <!-- plate-footer -->
-            <div class="plate-footer">
-                <div class="plate-footer-tit">
-                    <h3 v-show="car_type" @click="clickCarType(0)">普通车牌</h3>
-                    <h3 v-show="!car_type" @click="clickCarType(1)">新能源</h3>
-                    <div class="plate-key-cn" :class="{'plate-flex':isPlateTxtTit}">
-                        <dl v-for="item in plateTxtTit" @click="PlatePush(item)" v-text="item"></dl>
-                    </div>
-                </div>
-                <div class="plate-key-cn" :class="{'plate-flex':isPlateTxt}">
-                    <dl v-for="item in plateTxt" @click="PlatePush(item)" v-text="item"></dl>
-                </div>
-                 <div class="plate-key-en">
-                     <div class="plate-key-en-num" :class="{'plate-flex':isPlateNum}">
-                        <dl v-for="item in plateNum" @click="PlatePush(item)" v-text="item"></dl>
-                     </div>
-                    <div class="plate-key-en-num" :class="{'plate-flex':isPlateEn}">
-                        <dl v-for="item in plateEnOne" @click="PlatePush(item)" v-text="item"></dl>
-                        <dl class="plate-key-en-num-bg">I</dl>
-                        <dl class="plate-key-en-num-bg">O</dl>
-                        <dl v-for="item in PlateP" @click="PlatePush(item)" v-text="item"></dl>
-                    </div>
-                    <div class="plate-key-en-num" :class="{'plate-flex':isPlateEn}">
-                        <dl v-for="item in plateEnTwo" @click="PlatePush(item)" v-text="item"></dl>
-                    </div>
-                    <div class="plate-key-en-num" :class="{'plate-flex':isPlateEn}">
-                        <dl v-for="item in plateEnThree" @click="PlatePush(item)" v-text="item"></dl>
-                        <span><i class="weui-icon-cancel" @click="detele"></i></span>
-                    </div>
-                 </div>
-            </div>
-            <!-- /plate-footer -->
-        </div>
-        <!-- /plate -->
+<body  id="page-top" data-spy="scroll" data-target=".navbar" data-offset="100">
+
+<!-- Page Loader
+        ===================================== -->
+<div id="pageloader">
+  <div class="loader-item"> <img src="/dede58/img/other/puff.svg" alt=""> </div>
+</div>
+
+<!-- Navigation Area
+        ===================================== --> 
+
+<nav class="navbar navbar-pasific navbar-mp megamenu navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fa fa-bars"></i> </button>
+      <a class="navbar-brand page-scroll" href="#page-top"> <img src="/dede58/img/logo/logo-default.png" alt=""> dede58 </a> </div>
+    <div class="navbar-collapse collapse navbar-main-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/">网站首页 </a></li>
+        <li><a href="/a/guanyuwomen/" >关于我们 </a></li>
+        <li><a href="/a/fuwuzhongxin/" >服务中心 </a></li>
+        <li><a href="/a/tuanduirenyuan/" >团队展示 </a></li>
+        <li class="dropdown"><a href="/a/news/" class="dropdown-toggle color-light">新闻中心 </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/a/news/chanpindongtai/">产品动态</a></li>
+            <li><a href="/a/news/gongsixinwen/">公司新闻</a></li>
+            <li><a href="/a/news/xingyezhishi/">行业知识</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a href="/a/anni/" class="dropdown-toggle color-light">产品展示 </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/a/anni/pingmian/">平面设计</a></li>
+            <li><a href="/a/anni/shouji/">手机应用</a></li>
+            <li ><a href="/a/anni/websj/">网页设计</a></li>
+          </ul>
+        </li>
+        <li ><a href="/a/lianxiwomen/" >联系我们 </a> </li>
+        <li ><a href="http://www.dede58.com/" >织梦58 </a> </li>
+      </ul>
     </div>
-     <!-- /plate-bg -->
-     <!-- js -->
-     <aside>
-         <script src="js/jquery.min.js"></script>
-         <script src="js/vue.js"></script>
-         <script>
-            var plateList={
-                txt: [
-                    '京', '津', '冀', '晋', '辽', '蒙', '吉', '黑',
-                    '沪', '苏', '浙', '皖', '闽', '赣', '赣', '豫',
-                    '鄂', '湘', '粤', '桂', '琼', '渝', '川', '贵',
-                    '云', '陕', '甘', '青', '宁', '新', '藏', '使'
-                ],
-                txt_tit:['学','警','领'],
-                num:['1','2','3','4','5','6','7','8','9','0'],
-                en_one:['Q','W','E','R','T','Y','U'],
-                p:['P'],
-                en_two:['A','S','D','F','G','H','J','K','L'],
-                en_three:['Z','X','C','V','B','N','M'],
-            }
+  </div>
+</nav>
+ 
 
-             new Vue({
-                 el:'#app',
-                 data:{
-                    plateTxt:plateList.txt,             //文字键盘
-                    plateTxtTit:plateList.txt_tit,      //学，警，领
-                    plateNum:plateList.num,             //数字键盘
-                    plateEnOne:plateList.en_one,        //第一排英文
-                    PlateP:plateList.p,                 //p
-                    plateEnTwo:plateList.en_two,        //第二排英文
-                    plateEnThree:plateList.en_three,    //第三排英文
-                    car_type:true,                      // 车牌类型
-                    plateArr:[],                        //车牌号
-                    plateArrBorder:[],                  //车牌号border
-                    isPlateTxt:true,                    //文字键盘显示隐藏
-                    isPlateTxtTit:false,                //学，警，领显示隐藏
-                    isPlateNum:false,                   //数字显示隐藏
-                    isPlateEn:false,                    //英文显示隐藏
-                    isNew:false,                        //是否是新能源
-                 },
-                 methods:{
-                     PlatePush:function(item){
-                        //普通车牌
-                        if(this.car_type){
-                            //添加
-                            if (this.plateArr.length < 7) {
-                                this.plateArr.push(item)
-                                this.plateKey()
-                                // 输入完毕
-                                if (this.plateArr.length == 7) {
-                                    $('.plate-bg').fadeOut(400)
-                                    this.plate_car = this.plateArr.join('')
-                                }
-                            } 
-                        }else{
-                            //添加
-                            if (this.plateArr.length < 8) {
-                                this.plateArr.push(item)
-                                this.plateKey()
-                                // 输入完毕
-                                if (this.plateArr.length == 8) {
-                                    $('.plate-bg').fadeOut(400)
-                                    this.plate_car = this.plateArr.join('')
-                                }
-                            }
-                        }
-                        
-                     },
-                     detele:function(){
-                         this.plateArr.pop()
-                         this.plateKey()
-                         console.log(this.plateArr.length)
-                     },
-                     plateKey:function(){
-                         if (this.plateArr.length == 0) {
-                             this.isPlateHide()
-                             this.isPlateTxt = true;
-                         }
-                         if (this.plateArr.length == 1) {
-                             this.isPlateHide()
-                             this.isPlateEn = true;  
-                         }
-                         //车牌位数为2-5
-                         if (this.plateArr.length >= 2) {
-                            this.isPlateHide()
-                            this.isPlateNum = true;
-                            this.isPlateEn = true;  
-                         }
-                         //普通车牌
-                         if(this.car_type){
+<!-- Intro Area
+        ===================================== -->
+<header class="intro pt100 pb100 parallax-window" data-parallax="scroll" data-speed="0.5" data-image-src="/dede58/img/bg/img-bg-1.jpg">
+  <div class="intro-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2  mt-100">
+          <h1 class="brand-heading text-capitalize font-pacifico mt-100 color-light animated" data-animation="fadeInUp" data-animation-delay="100"> 提供 <i class="fa fa-heart color-pasific"></i> <span class="rotate mr10">网站模板, 网站素材, 建站培训 </span> 等资源 </h1>
+          <p class="intro-text mt25 color-gray animated" data-animation="fadeInUp" data-animation-delay="200">织梦58专业提供网站模板，网页模板，培训教程，网站素材等建站资源<br>
+            我们致为于打造优秀的建站资源共享平台！ </p>
+          <a class="button button-pasific button-lg hover-ripple-out animated" data-animation="fadeInUp" data-animation-delay="300" href="http://www.dede58.com/" target="_blank">浏览官网</a> </div>
+      </div>
+    </div>
+    <div class="intro-direction"> <a href="#welcome">
+      <div class="mouse-icon">
+        <div class="wheel"></div>
+      </div>
+      </a> </div>
+  </div>
+</header>
 
-                             if (this.plateArr.length == 6) {
-                                 this.isPlateHide()
-                                 this.isPlateTxtTit = true;
-                                 this.isPlateNum = true;
-                                 this.isPlateEn = true;
-                             }
-                         }
-                     },
-                     isPlateHide:function(){
-                         this.isPlateTxt = false;
-                         this.isPlateTxtTit = false;
-                         this.isPlateNum = false;
-                         this.isPlateEn = false; 
-                     },
-                     clickCarType:function(num){
-                         if(num==0){
-                             this.car_type=false;
-                             this.isNew=true;
-                             this.plateArrBorder.length = 9
-                         }else{
-                             this.car_type=true;
-                              this.isNew=false;
-                              this.plateArrBorder.length = 8
-                         }
-                         this.plateArr=[]
-                         this.plateKey()
-                     },
-                     //显示
-                     plate_number: function () {
-                         this.plateArr = []
-                         this.plateKey()
-                         $('.plate-bg').fadeIn(400)
-                     },
-                     //关闭
-                     plate_colse: function () {
-                         $('.plate-bg').fadeOut(400)
-                     }
-                 },
-                //  创建完成
-                 created:function(){
-                     this.plateArrBorder.length = 8
-                 },
-             })
-         </script>
-     </aside>
-     <!-- /js -->
+<!-- Welcome Area
+        ===================================== -->
+<div id="welcome" class="pt75">
+  <div class="container">
+    <div class="row"> 
+      
+      <!-- title start -->
+      <div class="col-md-12 text-center">
+        <h1 class="font-size-normal"> <small>www.dede58.com</small> 建站资源共享学习平台 <small class="heading heading-solid center-block"></small> </h1>
+      </div>
+      <!-- title end --> 
+      
+      <!-- title description start -->
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <p> 织梦58（www.dede58.com）专业提供网站模板，网页模板，教程培训，程序插件，网站素材等建站资源。我们致力于打造一个优秀的建站资源共享学习平台！ </p>
+      </div>
+      <!-- title description end --> 
+    </div>
+    <div class="row mt50"> 
+      
+      <!-- item one start -->
+      <div class="col-md-3 col-sm-6 col-xs-6 animated" data-animation="fadeInLeft" data-animation-delay="100">
+        <div class="content-box content-box-center"> <span class="icon-layers color-pasific"></span>
+          <h5>网站模板</h5>
+          <p>提供网站模板，网页模板，教程培训，程序插件，网站素材等建站资源</p>
+        </div>
+      </div>
+      <!-- item one end --> 
+      
+      <!-- item two start -->
+      <div class="col-md-3 col-sm-6 col-xs-6 animated" data-animation="fadeInLeft" data-animation-delay="200">
+        <div class="content-box content-box-center"> <span class="icon-mobile color-pasific"></span>
+          <h5>在线视频</h5>
+          <p>从零开始系统全面的教你如何建立一个属于自己的网站</p>
+        </div>
+      </div>
+      <!-- item two end --> 
+      
+      <!-- item three start -->
+      <div class="col-md-3 col-sm-6 col-xs-6 animated" data-animation="fadeInRight" data-animation-delay="300">
+        <div class="content-box content-box-center"> <span class="icon-camera color-pasific"></span>
+          <h5>在线培训</h5>
+          <p>织梦58老师通过QQ群远程教学，全面系统的给大家讲解建站知识</p>
+        </div>
+      </div>
+      <!-- item three end --> 
+      
+      <!-- item four start -->
+      <div class="col-md-3 col-sm-6 col-xs-6 animated" data-animation="fadeInRight" data-animation-delay="400">
+        <div class="content-box content-box-center"> <span class="icon-briefcase color-pasific"></span>
+          <h5>技术支持</h5>
+          <p>我们每天5X8小时QQ在线提供顾问式指导</p>
+        </div>
+      </div>
+      <!-- item four start --> 
+      
+    </div>
+  </div>
+</div>
+
+<!-- Portfolio Area
+        ===================================== -->
+<div id="portfolioGrid">
+  <div class="pt50">&nbsp;</div>
+  <div class="container-fluid bg-gray pt30">
+    <div class="row">
+      <div class="col-md-12"> 
+        
+        <!-- filters start -->
+        <ul class="filters text-center  mt25 mb50">
+          <li><a class="active" data-filter="*">所有产品</a></li>
+          
+          <li><a data-filter=".手机应用">手机应用</a></li>
+          
+          <li><a data-filter=".网站设计">网站设计</a></li>
+          
+          <li><a data-filter=".平面设计">平面设计</a></li>
+          
+        </ul>
+        <!-- filters end -->
+        
+        <div class="portfolio center-block"> <div class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-xs-12 案例产品" data-category=""> <a href="/uploads/160707/1-160FH10312148.jpg" class="magnific-popup"> <span class="glyphicon glyphicon-search hover-bounce-out"></span> </a> <img src="/uploads/160707/1-160FH10312148.jpg" alt="<font color='pasific'>dede58-建站资源共享</font>" class="img-responsive" height="200"> </div>
+<div class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-xs-12 平面设计" data-category=""> <a href="/uploads/160707/1-160FH101064E.jpg" class="magnific-popup"> <span class="glyphicon glyphicon-search hover-bounce-out"></span> </a> <img src="/uploads/160707/1-160FH101064E.jpg" alt="<font color='pasific'>织梦58-建站资源共</font>" class="img-responsive" height="200"> </div>
+<div class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-xs-12 网站设计" data-category=""> <a href="/uploads/160707/1-160FH10035937.jpg" class="magnific-popup"> <span class="glyphicon glyphicon-search hover-bounce-out"></span> </a> <img src="/uploads/160707/1-160FH10035937.jpg" alt="<font color='pasific'>dede58-建站资源共享</font>" class="img-responsive" height="200"> </div>
+<div class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-xs-12 手机应用" data-category=""> <a href="/uploads/allimg/150912/1-150912145S80-L.png" class="magnific-popup"> <span class="glyphicon glyphicon-search hover-bounce-out"></span> </a> <img src="/uploads/allimg/150912/1-150912145S80-L.png" alt="<font color='pasific'>响应式Web设计的</font>" class="img-responsive" height="200"> </div>
+<div class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-xs-12 手机应用" data-category=""> <a href="/uploads/allimg/150731/1-150I11A5030-L.jpg" class="magnific-popup"> <span class="glyphicon glyphicon-search hover-bounce-out"></span> </a> <img src="/uploads/allimg/150731/1-150I11A5030-L.jpg" alt="在网页设计中运用" class="img-responsive" height="200"> </div>
+<div class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-xs-12 平面设计" data-category=""> <a href="/uploads/150731/1-150I11I315O9.jpg" class="magnific-popup"> <span class="glyphicon glyphicon-search hover-bounce-out"></span> </a> <img src="/uploads/150731/1-150I11I315O9.jpg" alt="导航设计模式的重" class="img-responsive" height="200"> </div>
+<div class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-xs-12 网站设计" data-category=""> <a href="/uploads/allimg/150731/1-150I11H0260-L.jpg" class="magnific-popup"> <span class="glyphicon glyphicon-search hover-bounce-out"></span> </a> <img src="/uploads/allimg/150731/1-150I11H0260-L.jpg" alt="芯片市场竞争激烈" class="img-responsive" height="200"> </div>
+<div class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-xs-12 手机应用" data-category=""> <a href="/uploads/allimg/150912/1-1509121500440-L.jpeg" class="magnific-popup"> <span class="glyphicon glyphicon-search hover-bounce-out"></span> </a> <img src="/uploads/allimg/150912/1-1509121500440-L.jpeg" alt="5项提高产品设计的" class="img-responsive" height="200"> </div>
+ </div>
+        <!-- portfolio end --> 
+        
+      </div>
+      <!-- col-md-12 end --> 
+    </div>
+    <!-- row end --> 
+  </div>
+  <!-- container end --> 
+</div>
+<!-- section portfolio end --> 
+
+<!-- Team Area
+        ===================================== -->
+<div id="team" class="pt75">
+  <div class="container"> 
+    
+    <!-- title and short description start -->
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1 class="font-size-normal"> <small>About Team</small> 优秀的设计团队 <small class="heading heading-solid center-block"></small> </h1>
+      </div>
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <p class="lead"> 织梦58专业提供网站模板，网页模板，教程培训，程序插件，网站素材等建站资源。我们致力于打造一个优秀的建站资源共享学习平台！ </p>
+      </div>
+    </div>
+    <!-- title and short description end --> 
+    
+  </div>
+</div>
+<!-- section team end --> 
+
+<!-- Skill Area
+        ===================================== -->
+<div id="progressBar2">
+  <div class="container pt50 pb75">
+    <div class="row"> 
+      
+      <!-- left skill start -->
+      <div class="col-sm-6 col-md-6">
+        <h5 class="text-uppercase font-montserrat color-dark text-center mb25">平面设计</h5>
+        
+        <!-- skill one start -->
+        <h5 class="text-right">Adobe Photoshop</h5>
+        <div class="progress progress-xs progress-circle right">
+          <div class="progress-bar bg-primary" role="progressbar" data-transitiongoal="40"></div>
+        </div>
+        <!-- skill one end --> 
+        
+        <!-- skill two start -->
+        <h5 class="text-right">Adobe Illustrator</h5>
+        <div class="progress progress-sm progress-circle right">
+          <div class="progress-bar bg-success" role="progressbar" data-transitiongoal="60"></div>
+        </div>
+        <!-- skill two end --> 
+        
+        <!-- skill three start -->
+        <h5 class="text-right">Adobe InDesign</h5>
+        <div class="progress progress-md progress-circle right">
+          <div class="progress-bar bg-info" role="progressbar" data-transitiongoal="80"></div>
+        </div>
+        <!-- skill three end --> 
+        
+        <!-- skill four start -->
+        <h5 class="text-right">Sketch</h5>
+        <div class="progress progress-lg progress-circle right">
+          <div class="progress-bar bg-pasific" role="progressbar" data-transitiongoal="95"></div>
+        </div>
+        <!-- skill four end --> 
+      </div>
+      <!-- left skill end --> 
+      
+      <!-- right skill start -->
+      <div class="col-sm-6 col-md-6">
+        <h5 class="text-uppercase font-montserrat color-dark text-center mb25">模板开发</h5>
+        
+        <!-- skill five start -->
+        <h5>Wordpress</h5>
+        <div class="progress progress-circle progress-xs">
+          <div class="progress-bar bg-primary" role="progressbar" data-transitiongoal="40"></div>
+        </div>
+        <!-- skill five end --> 
+        
+        <!-- skill six start -->
+        <h5>Dedecms</h5>
+        <div class="progress progress-circle progress-sm">
+          <div class="progress-bar bg-success" role="progressbar" data-transitiongoal="60"></div>
+        </div>
+        <!-- skill six end --> 
+        
+        <!-- skill seven start -->
+        <h5>Discuz</h5>
+        <div class="progress progress-circle progress-md">
+          <div class="progress-bar bg-info" role="progressbar" data-transitiongoal="80"></div>
+        </div>
+        <!-- skill seven end --> 
+        
+        <!-- skill eight start -->
+        <h5>Phpcms</h5>
+        <div class="progress progress-circle progress-lg">
+          <div class="progress-bar bg-pasific" role="progressbar" data-transitiongoal="95"></div>
+        </div>
+        <!-- skill eight end --> 
+      </div>
+      <!-- right skill end --> 
+      
+    </div>
+    <!-- row end --> 
+  </div>
+  <!-- container end --> 
+</div>
+<!-- section skill end --> 
+
+<!-- Fun Fact Area
+        ===================================== -->
+<div id="fact" class="bg-grad-stellar pt100 pb100">
+  <div class="container"> 
+    
+    <!-- title and short description start -->
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center mb50">
+        <h1 class="font-size-normal color-light"> <small class="color-light">Your Business Partner</small> 公司业务范围和合作伙伴 </h1>
+      </div>
+    </div>
+    <!-- title and short description end -->
+    
+    <div class="row"> 
+      
+      <!-- fun fact left start -->
+      <div class="col-md-3">
+        <div class="row"> 
+          
+          <!-- fun fact one start -->
+          <div class="col-md-12 col-sm-6 col-xs-6">
+            <div class="fact">
+              <div class="fact-number timer" data-perc="387"> <span class="factor color-light"></span> </div>
+              <span class="fact-title color-light alpha7">网站模板</span> </div>
+          </div>
+          <!-- fun fact one end --> 
+          
+          <!-- fun fact two start -->
+          <div class="col-md-12 col-sm-6 col-xs-6">
+            <div class="fact">
+              <div class="fact-number timer" data-perc="578"> <span class="factor color-light"></span> </div>
+              <span class="fact-title color-light alpha7">网站会员</span> </div>
+          </div>
+          <!-- fun fact two end --> 
+          
+        </div>
+      </div>
+      <!-- fun fact left end --> 
+      
+      <!-- fun fact right start -->
+      <div class="col-md-3 col-md-push-6">
+        <div class="row"> 
+          
+          <!-- fun fact three start -->
+          <div class="col-md-12 col-sm-6 col-xs-6">
+            <div class="fact">
+              <div class="fact-number timer" data-perc="175"> <span class="factor color-light"></span> </div>
+              <span class="fact-title color-light alpha7">钻石VIP</span> </div>
+          </div>
+          <!-- fun fact three end --> 
+          
+          <!-- fun fact four start -->
+          <div class="col-md-12 col-sm-6 col-xs-6">
+            <div class="fact">
+              <div class="fact-number timer" data-perc="350"> <span class="factor color-light"></span> </div>
+              <span class="fact-title color-light alpha7">客户案例</span> </div>
+          </div>
+          <!-- fun fact four end --> 
+          
+        </div>
+      </div>
+      <!-- fun fact right end -->
+      
+      <div class="col-md-6 col-md-pull-3"> <img src="/dede58/img/other/map.png" alt="macbook" class="img-responsive"> </div>
+    </div>
+  </div>
+  <!-- container end --> 
+</div>
+<!-- section fun fact end --> 
+
+<!-- Features Area
+        ===================================== -->
+<div id="features" class="pt75 mb25">
+  <div class="container"> 
+    
+    <!-- title and short description start -->
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1 class="font-size-normal"> <small>Amazing Features</small> 集团企业发展历程 <small class="heading heading-solid center-block"></small> </h1>
+      </div>
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <p class="lead"> 织梦58专业提供网站模板，网页模板，教程培训，程序插件，网站素材等建站资源。我们致力于打造一个优秀的建站资源共享学习平台！ </p>
+      </div>
+    </div>
+    <!-- title and short description end --> 
+    
+  </div>
+  <!-- container end --> 
+</div>
+<!-- section feature end --> 
+
+<!-- SVG Cart Area
+        ===================================== -->
+<div class="svg-container2"> 
+  <!-- svg start --> 
+  <svg id="svgLine" xmlns="http://www.w3.org/2000/svg" version="1.1" 
+                 width="100%" height="300" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2000 250" preserveAspectRatio="xMinYMax">
+  <polygon points="-150,300 200,90 550,140 800,60 1100,150 1400,100 1700,10 1900,50 2500,90 2500,300" 
+                         fill="url(#BglinierGradient)" stroke="none"> </polygon>
+  <polyline points="-150,244 200,90 550,140 800,60 1100,150 1400,100 1700,10 1900,50 2500,90 2500,500" 
+                          fill="none" stroke="#7668af" stroke-width="0"> </polyline>
+  <text x="170" y="20" fill="#8b949b" style="font-size: 120%; font-weight: 400;">Lines of Code</text>
+  <text x="170" y="60" fill="#5cb85c" style="font-size: 250%; font-weight: 300;">120K</text>
+  <text x="510" y="60" fill="#8b949b" style="font-size: 120%; font-weight: 400;">Shortcodes</text>
+  <text x="520" y="100" fill="#5f6467" style="font-size: 250%; font-weight: 300;">750</text>
+  <text x="760" y="0" fill="#8b949b" style="font-size: 120%; font-weight: 400;">Icons Included</text>
+  <text x="760" y="40" fill="#b2cc71" style="font-size: 250%; font-weight: 300;">2000+</text>
+  <text x="1060" y="70" fill="#8b949b" style="font-size: 120%; font-weight: 400;">Happy Clients</text>
+  <text x="1060" y="110" fill="#3c88c6" style="font-size: 250%; font-weight: 300;">950</text>
+  <text x="1350" y="30" fill="#8b949b" style="font-size: 120%; font-weight: 400;">Item Sales</text>
+  <text x="1350" y="70" fill="#1abc9c" style="font-size: 250%; font-weight: 300;">5,780</text>
+  <text x="1650" y="90" fill="#333333" style="font-size: 140%; font-weight: 300; font-family: 'Pacifico', cursive;">Counting..</text>
+  <ellipse id="svg_1" rx="15" ry="15" cx="200" cy="90" fill="#5cb85c" stroke="#ffffff" stroke-width="5"></ellipse>
+  <ellipse id="svg_2" rx="10" ry="10" cx="550" cy="140" fill="#5f6467" stroke="#ffffff" stroke-width="5"></ellipse>
+  <ellipse id="svg_3" rx="15" ry="15" cx="800" cy="60" fill="#b2cc71" stroke="#ffffff" stroke-width="5"></ellipse>
+  <ellipse id="svg_4" rx="15" ry="15" cx="1100" cy="150" fill="#3c88c6" stroke="#ffffff" stroke-width="5"></ellipse>
+  <ellipse id="svg_5" rx="10" ry="10" cx="1400" cy="100" fill="#1abc9c" stroke="#ffffff" stroke-width="5"></ellipse>
+  <ellipse id="svg_6" rx="10" ry="10" cx="1700" cy="10" fill="#a85ad4" stroke="#ffffff" stroke-width="5"></ellipse>
+  <ellipse id="svg_7" rx="9" ry="9" cx="1900" cy="50" fill="#ff8b34" stroke="#ffffff" stroke-width="5"></ellipse>
+  <ellipse id="svg_8" rx="6" ry="6" cx="2500" cy="90" fill="#fd40b3" stroke="#ffffff" stroke-width="5"></ellipse>
+  <ellipse id="svg_9" rx="6" ry="6" cx="2200" cy="90" fill="#fd3635" stroke="#ffffff" stroke-width="5"></ellipse>
+  <defs>
+    <lineargradient id="BglinierGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop id="BgLinierGradientStop_1" stop-opacity="1" stop-color="#e8f3f5" offset="0"></stop>
+      <stop id="BgLinierGradientStop_2" stop-opacity="1" stop-color="#e8f3f5" offset="1"></stop>
+    </lineargradient>
+  </defs>
+  </svg> 
+  <!-- svg end --> 
+</div>
+<!-- svg container end --> 
+
+<!-- Achievement Area
+        ===================================== -->
+<div class="pt50" style="background: url(/dede58/img/bg/bg-wood.jpg) 100% 100% repeat-x #e8f3f5;">
+  <div class="container"> 
+    
+    <!-- title and short description start -->
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="font-source-sans-pro text-center mb50"> <small class="heading heading-icon heading-icon-rounded bg-grad-stellar center-block"> <i class="fa fa-trophy color-light"></i> </small> 织梦58成为模板行业第一的分享平台 <small class="heading-desc text-lowercase color-dark"> Every day, We makes thousands of customers happy. </small> </h2>
+      </div>
+    </div>
+    <!-- title and short description end -->
+    
+    <div class="row mb50 text-center">
+      <div class="col-sm-12"> <i class="fa fa-android fa-3x mr20 color-green"></i> <i class="fa fa-apple fa-4x mr20 color-dark"></i> <i class="fa fa-amazon fa-4x mr20 color-red"></i> <i class="fa fa-windows fa-3x color-purple"></i> </div>
+    </div>
+    <div class="col-md-12"> <img src="/dede58/img/other/img-other-6.png" alt="device" class="img-responsive center-block"> </div>
+  </div>
+  <!-- container end --> 
+</div>
+<!-- section achievment end --> 
+
+<!-- Info Area
+        ===================================== -->
+<div id="Info-1" class="bg-gray pt30 bb-solid-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center pb35">
+        <h4>我们致力于打造一个优秀的建站资源共享学习平台</h4>
+        <a class="button button-md button-blue hover-ripple-out mr10">联系我们</a> <a class="button button-md button-pasific hover-ripple-out">服务中心</a> </div>
+    </div>
+  </div>
+</div>
+
+<!-- General Content Area
+        ===================================== -->
+<div id="general-content-1" class="pt100 pb100">
+  <div class="container">
+    <div class="row"> 
+      
+      <!-- left content start -->
+      <div class="col-md-5">
+        <div class="general-content">
+          <h3 class="mb25"> <small class="color-red">www.dede58.com</small> 提供各种网站模板下载 </h3>
+          <p>织梦58（www.dede58.com）专业提供网站模板，网页模板，网站源码，网站素材，网页特效等网页设计素材免费下载。我们致力于打造一个优秀的建站资源共享学习平台。要出售自己的得意模板、插件、教程？欢迎您来这里交易，找到需要她、欣赏她的人。苦苦寻觅某套模板、迫切希望得到设计帮助？这里或许能很快解决您的问题。</p>
+          <a class="button button-md button-pasific hover-ripple-out" href="http://www.dede58.com/">模板下载</a>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!-- left content end --> 
+      
+      <!-- right content start -->
+      <div class="col-md-5 col-md-push-1"> <img src="/dede58/img/other/img-other-1.png" alt="browser iphone" class="img-responsive pull-right"> </div>
+      <!-- right content end --> 
+      
+    </div>
+  </div>
+</div>
+
+<!-- General Content Area
+        ===================================== -->
+<div id="general-content-2" class="bg-gray pt100 pb100">
+  <div class="container">
+    <div class="row"> 
+      
+      <!-- left content start -->
+      <div class="col-md-6"> <img src="/dede58/img/other/img-other-2.png" alt="browser iphone" class="img-responsive center-block"> </div>
+      <!-- left content end --> 
+      
+      <!-- right content start -->
+      <div class="col-md-5 col-md-push-1">
+        <div class="general-content">
+          <h3 class="mb25"> <small class="color-red">www.dede58.com</small> 远程QQ在线建站培训 </h3>
+          <p>从零开始系统全面的教你如何建立一个属于自己的网站并实现盈利。课程涉及网站搭建，网站SEO，模板开发等最新建站技术。认识html语言，div+css布局等一些建站基础知识。织梦58老师通过QQ群远程教学，全面系统的给大家讲解建站知识。内容涉及网站搭建，网站优化，模板开发等最新建站技术。</p>
+          <a class="button button-md button-pasific hover-ripple-out">Purchase Now</a>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!-- right content end --> 
+      
+    </div>
+    <!-- row end --> 
+  </div>
+  <!-- container end --> 
+</div>
+<!-- section general info end --> 
+
+<!-- Price Area
+        ===================================== -->
+<div id="price" class="bg-grad-stellar pt75 pb30">
+  <div class="container pb50"> 
+    
+    <!-- title start -->
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center mb50">
+        <h1 class="font-size-normal color-light"> <small class="color-light">Service Prices</small> 织梦58会员价格表 </h1>
+      </div>
+    </div>
+    <!-- title start -->
+    
+    <div class="row"> 
+      
+      <!-- table price one start -->
+      <div class="col-md-3 col-sm-6 col-xs-12 hover-float">
+        <div class="price price-three">
+          <div class="price-header"> <span class="color-green"><sup>$</sup>100</span>
+            <h4>白银VIP</h4>
+          </div>
+          <div class="price-body">
+            <ul>
+              <li>Two Web Designs</li>
+              <li>Unlimited Revision</li>
+              <li>Free One Year Domain</li>
+              <li>Free Six Months Hosting</li>
+              <li>Free Installation</li>
+              <li>Full Support</li>
+            </ul>
+          </div>
+          <div class="price-footer"> <a href="#" class="button button-sm button-rounded button-green hover-ripple-out">立即购买</a> </div>
+        </div>
+      </div>
+      <!-- table price one end --> 
+      
+      <!-- table price two start -->
+      <div class="col-md-3 col-sm-6 col-xs-12 hover-float">
+        <div class="price price-three">
+          <div class="price-badge bg-grad-blood-mary">热门</div>
+          <div class="price-header"> <span class="color-success"><sup>$</sup>200</span>
+            <h4>黄金VIP</h4>
+          </div>
+          <div class="price-body">
+            <ul>
+              <li>Two Web Designs</li>
+              <li>Unlimited Revision</li>
+              <li>Free One Year Domain</li>
+              <li>Free Six Months Hosting</li>
+              <li>Free Installation</li>
+              <li>Full Support</li>
+            </ul>
+          </div>
+          <div class="price-footer"> <a href="#" class="button button-sm button-rounded button-success hover-ripple-out">立即购买</a> </div>
+        </div>
+      </div>
+      <!-- table price two end --> 
+      
+      <!-- table price three start -->
+      <div class="col-md-3 col-sm-6 col-xs-12 hover-float">
+        <div class="price price-three">
+          <div class="price-header"> <span class="color-cyan"><sup>$</sup>500</span>
+            <h4>白金VIP</h4>
+          </div>
+          <div class="price-body">
+            <ul>
+              <li>Two Web Designs</li>
+              <li>Unlimited Revision</li>
+              <li>Free One Year Domain</li>
+              <li>Free Six Months Hosting</li>
+              <li>Free Installation</li>
+              <li>Full Support</li>
+            </ul>
+          </div>
+          <div class="price-footer"> <a href="#" class="button button-sm button-rounded button-cyan hover-ripple-out">立即购买</a> </div>
+        </div>
+      </div>
+      <!-- table price three end --> 
+      
+      <!-- table price four start -->
+      <div class="col-md-3 col-sm-6 col-xs-12 hover-float">
+        <div class="price price-three">
+          <div class="price-badge bg-grad-stellar">推荐</div>
+          <div class="price-header"> <span class="color-blue"><sup>$</sup>800</span>
+            <h4>钻石VIP</h4>
+          </div>
+          <div class="price-body">
+            <ul>
+              <li>Two Web Designs</li>
+              <li>Unlimited Revision</li>
+              <li>Free One Year Domain</li>
+              <li>Free Six Months Hosting</li>
+              <li>Free Installation</li>
+              <li>Full Support</li>
+            </ul>
+          </div>
+          <div class="price-footer"> <a href="#" class="button button-sm button-rounded button-blue hover-ripple-out">Order Now</a> </div>
+        </div>
+      </div>
+      <!-- table price four end --> 
+      
+    </div>
+    <!-- row end -->
+    
+    <div class="row text-center mt50">
+      <h4 class="color-light">如有疑问，可电话联系我们: <i class="fa fa-phone"></i> 400-888-8888</h4>
+    </div>
+  </div>
+  <!-- container end --> 
+</div>
+<!-- section price end --> 
+
+<!-- Blog Area
+        ===================================== -->
+<div id="blogs" class="bg-gray pt75 pb75">
+  <div class="container"> 
+    
+    <!-- title start -->
+    <div class="row text-center mb25">
+      <h1 class="font-size-normal"> <small>News Center</small> 公司最新新闻动态 <small class="heading heading-solid center-block"></small> </h1>
+    </div>
+    <!-- title end -->
+    
+    <div class="row"> <div class="col-md-4 col-sm-6 col-xs-12 mb50">
+        <div class="blog-one">
+          <div class="blog-one-header"> <img src="/uploads/160707/1-160FH0564GE.jpg" alt="<font color='pasific'>织梦58-建站资源共享学习</font>" class="img-responsive" style="height:220px; width:100%"> </div>
+          <div class="blog-one-attrib"> <img src="/dede58/img/other/photo-1.jpg" alt="photo blog" class="blog-author-photo"> <span class="blog-author-name">admin</span> <span class="blog-date">2016-07-07</span> </div>
+          <div class="blog-one-body">
+            <h4 class="blog-title"><a href="/a/news/2015/0722/1.html"><font color='pasific'>织梦58-建站资源共享学习</font></a></h4>
+            <p class=""> 织梦58（www.dede58.com）专业提供网站模板，网页模板，网站源码，网站素材，网页特效等 </p>
+          </div>
+          <div class="blog-one-footer"> <a href="/a/news/2015/0722/1.html">Read More</a> <i class="fa fa-heart"></i>73 </div>
+        </div>
+      </div>
+<div class="col-md-4 col-sm-6 col-xs-12 mb50">
+        <div class="blog-one">
+          <div class="blog-one-header"> <img src="/uploads/allimg/150731/1-150I11A5030-L.jpg" alt="<font color='pasific'>2015年兰博基尼工厂实现“</font>" class="img-responsive" style="height:220px; width:100%"> </div>
+          <div class="blog-one-attrib"> <img src="/dede58/img/other/photo-1.jpg" alt="photo blog" class="blog-author-photo"> <span class="blog-author-name">admin</span> <span class="blog-date">2016-07-07</span> </div>
+          <div class="blog-one-body">
+            <h4 class="blog-title"><a href="/a/news/2015/0731/3.html"><font color='pasific'>2015年兰博基尼工厂实现“</font></a></h4>
+            <p class=""> 织梦58（www.dede58.com）专业提供网站模板，网页模板，网站源码，网站素材，网页特效等 </p>
+          </div>
+          <div class="blog-one-footer"> <a href="/a/news/2015/0731/3.html">Read More</a> <i class="fa fa-heart"></i>142 </div>
+        </div>
+      </div>
+<div class="col-md-4 col-sm-6 col-xs-12 mb50">
+        <div class="blog-one">
+          <div class="blog-one-header"> <img src="/uploads/150731/1-150I11F211338.jpg" alt="<font color='pasific'>dede58-建站资源共享学习平</font>" class="img-responsive" style="height:220px; width:100%"> </div>
+          <div class="blog-one-attrib"> <img src="/dede58/img/other/photo-1.jpg" alt="photo blog" class="blog-author-photo"> <span class="blog-author-name">admin</span> <span class="blog-date">2016-07-07</span> </div>
+          <div class="blog-one-body">
+            <h4 class="blog-title"><a href="/a/news/2015/0731/4.html"><font color='pasific'>dede58-建站资源共享学习平</font></a></h4>
+            <p class=""> 织梦58（www.dede58.com）专业提供网站模板，网页模板，网站源码，网站素材，网页特效等 </p>
+          </div>
+          <div class="blog-one-footer"> <a href="/a/news/2015/0731/4.html">Read More</a> <i class="fa fa-heart"></i>186 </div>
+        </div>
+      </div>
+ </div>
+    <!-- row end --> 
+  </div>
+  <!-- container end --> 
+</div>
+<!-- section blog end --> 
+
+<!-- Newsletter Area
+        =====================================-->
+<div id="newsletter" class="bg-dark2 pt50 pb50">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <h4 class="color-light"> QQ邮件订阅 </h4>
+      </div>
+      <div class="col-md-10">
+        <form name="newsletter" action="http://list.qq.com/cgi-bin/qf_compose_send" target="_blank" method="post">
+          <div class="input-newsletter-container">
+            <input type="hidden" name="t" value="qf_booked_feedback">
+            <input type="hidden" name="id" value="79d7181ac4d8b0144664925406fa6b1ebc29568929546ae8">
+            <input type="text" onblur="if (value ==''){value='QQ邮箱'}" onfocus="if (value =='QQ邮箱'){value =''}" class="input-newsletter" placeholder="请输入你的QQ邮箱" value="" id="to" name="to" class="mail">
+          </div>
+          <input type="submit" value="立即订阅" class="button button-sm button-pasific hover-ripple-out">
+        </form>
+      </div>
+    </div>
+    <!-- row end --> 
+  </div>
+  <!-- container end --> 
+</div>
+<!-- section newsletter end --> 
+
+<!-- Testimonial Area
+        ===================================== -->
+<div id="testimonial" class="pt75 pb75">
+  <div class="container"> 
+    
+    <!-- title start -->
+    <div class="row text-center mb25">
+      <h1 class="font-size-normal"> <small>Testimonials</small> 客户评论 <small class="heading heading-solid center-block"></small> </h1>
+    </div>
+    <!-- title end -->
+    
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="row">
+          <div id="owlSectionThreeItem" class="owl-carousel"> 
+            
+            <!-- Testimonial Item start -->
+            <div class="testimonial testimonial-triangle-isosceles bottom-left">
+              <div class="testimonial-body">
+                <p> 在网上寻觅了很久很久。终于找到了这里。晃眼一看，好多漂亮的模板。下载了几个都很好用。希望越做越好，多提供些精品资源！ </p>
+              </div>
+              <div class="testimonial-footer"> <img src="/dede58/img/other/photo-1.jpg" alt="testimonial author" class="img-responsive img-circle"> <i class="fa fa-quote-left"></i> Martin Smith <a href="#">dede58.com </a> </div>
+            </div>
+            <!-- Testimonial Item end --> 
+            
+            <!-- Testimonial Item start -->
+            <div class="testimonial testimonial-triangle-isosceles bottom-left">
+              <div class="testimonial-body">
+                <p> 找了好久啊，一直想有一个这样的网站，找来找去，老感觉么有合适的。偶然间来到这儿，爽。找到啦！！！！ </p>
+              </div>
+              <div class="testimonial-footer"> <img src="/dede58/img/other/photo-2.jpg" alt="testimonial author" class="img-responsive img-circle"> <i class="fa fa-quote-left"></i> Steve Austin <a href="#">dede58.com </a> </div>
+            </div>
+            <!-- Testimonial Item end --> 
+            
+            <!-- Testimonial Item start -->
+            <div class="testimonial testimonial-triangle-isosceles bottom-left">
+              <div class="testimonial-body">
+                <p> 本站值得肯定的几点！
+                  
+                  1、资源较为优质 2、域名较为简洁 3、灵活应用了DZ的程序 </p>
+              </div>
+              <div class="testimonial-footer"> <img src="/dede58/img/other/photo-4.jpg" alt="testimonial author" class="img-responsive img-circle"> <i class="fa fa-quote-left"></i> Gisselse <a href="#">rv28.com </a> </div>
+            </div>
+            <!-- Testimonial Item end --> 
+            
+            <!-- Testimonial Item start -->
+            <div class="testimonial testimonial-triangle-isosceles bottom-left">
+              <div class="testimonial-body">
+                <p> 织梦58对于网站建设新手来说，是一个最好的平台，你可以随心找到你最喜欢的网站模板，做出你喜欢的网站。 </p>
+              </div>
+              <div class="testimonial-footer"> <img src="/dede58/img/other/photo-1.jpg" alt="testimonial author" class="img-responsive img-circle"> <i class="fa fa-quote-left"></i> Martin Smith <a href="#">dede58.com </a> </div>
+            </div>
+            <!-- Testimonial Item end --> 
+            
+            <!-- Testimonial Item start -->
+            <div class="testimonial testimonial-triangle-isosceles bottom-left">
+              <div class="testimonial-body">
+                <p> 找模板找了很久了，于是找到了织梦58，觉的这里的模板很不错，下载了两套试试，果然可以用。于是充值了，希望站长以后多多指点啊！ </p>
+              </div>
+              <div class="testimonial-footer"> <img src="/dede58/img/other/photo-2.jpg" alt="testimonial author" class="img-responsive img-circle"> <i class="fa fa-quote-left"></i> Steve Austin <a href="#">dede58.com </a> </div>
+            </div>
+            <!-- Testimonial Item end --> 
+            
+            <!-- Testimonial Item start -->
+            <div class="testimonial testimonial-triangle-isosceles bottom-left">
+              <div class="testimonial-body">
+                <p> 织梦58站长很友好，为我们这些新手站长提供这么多的模版。大家一起交流，才能成长得更快吧！感谢织梦58，感谢网友，你们辛苦了！ </p>
+              </div>
+              <div class="testimonial-footer"> <img src="/dede58/img/other/photo-4.jpg" alt="testimonial author" class="img-responsive img-circle"> <i class="fa fa-quote-left"></i> Goselle <a href="#">rv28.com </a> </div>
+            </div>
+            <!-- Testimonial Item end --> 
+            
+          </div>
+          <!-- owlSectionThreeItem end --> 
+        </div>
+        <!-- row end --> 
+      </div>
+      <!-- col end --> 
+      
+    </div>
+    <!-- row end --> 
+  </div>
+  <!-- container end --> 
+</div>
+<!-- section testimonial end --> 
+
+<!-- Contact Us Area
+        =====================================-->
+<div id="contact" class="pt100 pb100 bg-grad-stellar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row"> 
+          
+          <!-- title start -->
+          <div class="col-md-12 mb50">
+            <h1 class="font-size-normal color-light"> <small class="color-light">Contact Us</small> 建站资源共享平台 </h1>
+            <h5 class="color-light">织梦58专业提供网站模板，网页模板，模板教程，网页制作，程序插件，网站素材等建站资源，我们致为于打造优秀的建站资源共享平台！ </h5>
+          </div>
+          <!-- title end --> 
+          
+          <!-- contact info start -->
+          <div class="col-md-3 col-sm-3 col-xs-12"> <span class="icon-map color-light el-icon2x"></span>
+            <h5 class="color-light"><strong>Address</strong></h5>
+            <p class="color-light">广东省广州市番禺工业开发区<br>金城国际27楼39号</p>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-6"> <span class="icon-megaphone color-light el-icon2x"></span>
+            <h5 class="color-light"><strong>Phone</strong></h5>
+            <p class="color-light">+86 186 8888 6688</p>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-6"> <span class="icon-envelope color-light el-icon2x"></span>
+            <h5 class="color-light"><strong>Email</strong></h5>
+            <p class="color-light">admin@dede58.com</p>
+          </div>
+          <!-- contact info end --> 
+          
+        </div>
+        <!-- row left end --> 
+      </div>
+      <!-- col left end -->
+      
+      <div class="col-md-6">
+        <div class="contact contact-us-one">
+          <div class="col-sm-12 col-xs-12 text-center mb20">
+            <h4 class="pb25 bb-solid-1 text-uppercase"> 在线留言 <small class="text-lowercase">我们致为于打造优秀的建站资源共享平台</small> </h4>
+          </div>
+          <form name="contact" method="post" enctype="multipart/form-data" action="/plus/diy.php">
+            <input type="hidden" value="post" name="action">
+            <input type="hidden" value="1" name="diyid">
+            <input type="hidden" value="2" name="do">
+            <!-- fullname start -->
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="form-group">
+                <input type="text" class="input-md input-rounded form-control" placeholder="姓名" maxlength="100" name="name" required>
+              </div>
+            </div>
+            <!-- fullname end --> 
+            
+            <!-- email start -->
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="form-group">
+                <input type="text" class="input-md input-rounded form-control" placeholder="email" maxlength="100" name="email" required>
+              </div>
+            </div>
+            <!-- email end --> 
+            
+            <!-- website start -->
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="form-group">
+                <input type="text" class="input-md input-rounded form-control" placeholder="电话" name="phone" name="phone" maxlength="100">
+              </div>
+            </div>
+            <!-- website end --> 
+            
+            <!-- security start -->
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="form-group">
+                <input type="text" class="input-md input-rounded form-control" placeholder="QQ" maxlength="100" name="qq" required>
+              </div>
+            </div>
+            <!-- security end --> 
+            
+            <!-- textarea start -->
+            <div class="col-sm-12">
+              <textarea class="form-control" rows="3" name="con"></textarea>
+            </div>
+            <!-- textarea end -->
+            <input type="hidden" value="name,text;email,text;con,multitext;phone,text;qq,text" name="dede_fields">
+            <input type="hidden" value="635d8e1eb61cdd5fc1a9a3356128bfdb" name="dede_fieldshash">
+            <!-- button start -->
+            <div class="col-sm-12 mt10 text-center">
+              <input type="submit" value="提 交" name="submit" class="button-3d button-md button-block button-pasific hover-ripple-out">
+            </div>
+            <!-- button end -->
+            
+          </form>
+        </div>
+        <!-- div contact end --> 
+      </div>
+      <!-- col end --> 
+      
+    </div>
+    <!-- row end --> 
+  </div>
+  <!-- container end --> 
+</div>
+<!-- section contact end --> 
+
+<!-- Clients Area
+        ===================================== -->
+<div id="client" class="bg-gray pt50 pb20">
+  <div class="container">
+    <div class="row"> 
+      
+      <!-- logo client start -->
+      <div class="col-md-2 col-sm-3 col-xs-4"> <img src="/dede58/img/brand/paypal-gray.png" alt="client logo" class="img-responsive center-block animated" data-animation="fadeIn" data-animation-delay="300"> </div>
+      <!-- logo client end --> 
+      
+      <!-- logo client start -->
+      <div class="col-md-2 col-sm-3 col-xs-4"> <img src="/dede58/img/brand/evernote-gray.png" alt="client logo" class="img-responsive center-block animated" data-animation="fadeIn" data-animation-delay="150"> </div>
+      <!-- logo client end --> 
+      
+      <!-- logo client start -->
+      <div class="col-md-2 col-sm-3 col-xs-4"> <img src="/dede58/img/brand/microsoft-gray.png" alt="client logo" class="img-responsive center-block animated" data-animation="fadeIn" data-animation-delay="100"> </div>
+      <!-- logo client end --> 
+      
+      <!-- logo client start -->
+      <div class="col-md-2 col-sm-3 col-xs-4"> <img src="/dede58/img/brand/smashing-gray.png" alt="client logo" class="img-responsive center-block animated" data-animation="fadeIn" data-animation-delay="150"> </div>
+      <!-- logo client end --> 
+      
+      <!-- logo client start -->
+      <div class="col-md-2 col-sm-3 col-xs-4"> <img src="/dede58/img/brand/mashable-gray.png" alt="client logo" class="img-responsive center-block animated" data-animation="fadeIn" data-animation-delay="200"> </div>
+      <!-- logo client end --> 
+      
+      <!-- logo client start -->
+      <div class="col-md-2 col-sm-3 col-xs-4"> <img src="/dede58/img/brand/guardian-gray.png" alt="client logo" class="img-responsive center-block animated" data-animation="fadeIn" data-animation-delay="300"> </div>
+      <!-- logo client end --> 
+      
+    </div>
+    <!-- row end --> 
+  </div>
+  <!-- container end --> 
+</div>
+<!-- section clients end --> 
+
+<!-- footer Area
+        ===================================== --> 
+
+﻿<div id="footer" class="footer-two pt50">
+  <div class="container-fluid bb-solid-1">
+    <div class="container pb35">
+      <div class="row"> 
+        
+        <!-- footer about start -->
+        <div class="col-md-3 col-sm-12 col-xs-12">
+          <h6 class="font-montserrat text-uppercase color-dark">About Us</h6>
+          <p>织梦58（www.dede58.com）专业提供网站模板，网页模板，模板教程，网页制作，程序插件，网站素材等建站资源，我们致为于打造优秀的建站资源共享平台！</p>
+        </div>
+        <!-- footer about end --> 
+        
+        <!-- footer menu one start -->
+        <div class="col-md-2 col-md-offset-1 col-sm-3 col-xs-4">
+          <h6 class="font-montserrat text-uppercase color-dark">Website Menu</h6>
+          <ul class="no-icon-list">
+            <li><a href="/a/guanyuwomen/">关于我们</a></li>
+            <li><a href="/a/fuwuzhongxin/">服务中心</a></li>
+            <li><a href="/a/tuanduirenyuan/">团队展示</a></li>
+          </ul>
+        </div>
+        <!-- footer menu one end --> 
+        
+        <!-- footer menu two start -->
+        <div class="col-md-2 col-sm-3 col-xs-4">
+          <h6 class="font-montserrat text-uppercase color-dark">News Center</h6>
+          <ul class="no-icon-list">
+            <li><a href="/a/news/gongsixinwen/">公司新闻</a></li>
+            <li><a href="/a/news/chanpindongtai/">产品动态</a></li>
+            <li><a href="/a/news/xingyezhishi/">行业知识</a></li>
+          </ul>
+        </div>
+        <!-- footer menu two end --> 
+        
+        <!-- footer menu three start -->
+        <div class="col-md-2 col-sm-3 col-xs-4">
+          <h6 class="font-montserrat text-uppercase color-dark">Product Show</h6>
+          <ul class="no-icon-list">
+            <li><a href="/a/anni/shouji/">手机应用</a></li>
+            <li><a href="/a/anni/websj/">网站设计</a></li>
+            <li><a href="/a/anni/pingmian/">平面设计</a></li>
+          </ul>
+        </div>
+        <!-- footer menu three end --> 
+        
+        <!-- footer social icons start -->
+        <div class="col-md-2 col-sm-3 col-xs-12">
+          <h6 class="font-montserrat text-uppercase color-dark">Fllower Us</h6>
+          <div class="social social-two"> <a href="#"><i class="fa fa-weixin color-blue"></i></a> <a href="#"><i class="fa fa-qq color-primary"></i></a> <a href="#"><i class="fa fa-weibo color-blue"></i></a><br>
+            <br>
+            <a href="#"><i class="fa fa-renren color-dark"></i></a> <a href="#"><i class="fa fa-pinterest color-red"></i></a> </div>
+        </div>
+        <!-- footer social icons end --> 
+        
+      </div>
+      <!-- row end --> 
+    </div>
+    <!-- container end --> 
+  </div>
+  <!-- container-fluid end -->
+  
+  <div class="container-fluid pt20">
+    <div class="container">
+      <div class="row"> 
+        
+        <!-- copyright start -->
+        <div class="col-md-6 col-sm-6 col-xs-6 pull-left">
+          <p>Copyright &copy; 2002-2011 DEDE58.COM 织梦模板 版权所有</p>
+        </div>
+        <!-- copyright end --> 
+        
+        <!-- footer bottom start -->
+        <div class="col-md-6 col-sm-6 col-xs-6 pull-right">
+          <p class="text-right"> 粤ICP备326596598号 </p>
+        </div>
+        <!-- footer bottom end --> 
+        
+      </div>
+      <!-- row end --> 
+    </div>
+    <!-- container end --> 
+  </div>
+  <!-- container-fluid end --> 
+</div>
+<!-- footer end --> 
+
+<!-- JQuery Core
+        =====================================--> 
+<script src="/dede58/js/core/jquery.min.js"></script> 
+<script src="/dede58/js/core/bootstrap.min.js"></script> 
+
+<!-- Magnific Popup
+        =====================================--> 
+<script src="/dede58/js/magnific-popup/jquery.magnific-popup.min.js"></script> 
+<script src="/dede58/js/magnific-popup/magnific-popup-zoom-gallery.js"></script> 
+
+<!-- Progress Bars
+        =====================================--> 
+<script src="/dede58/js/progress-bar/bootstrap-progressbar.js"></script> 
+<script src="/dede58/js/progress-bar/bootstrap-progressbar-main.js"></script> 
+
+<!-- Text Rotator
+        =====================================--> 
+<script src="/dede58/js/text-rotator/jquery.simple-text-rotator.min.js"></script> 
+
+<!-- JQuery Main
+        =====================================--> 
+<script src="/dede58/js/main/jquery.appear.js"></script> 
+<script src="/dede58/js/main/isotope.pkgd.min.js"></script> 
+<script src="/dede58/js/main/parallax.min.js"></script> 
+<script src="/dede58/js/main/jquery.countTo.js"></script> 
+<script src="/dede58/js/main/owl.carousel.min.js"></script> 
+<script src="/dede58/js/main/jquery.sticky.js"></script> 
+<script src="/dede58/js/main/ion.rangeSlider.min.js"></script> 
+<script src="/dede58/js/main/main.js"></script>
 </body>
 </html>

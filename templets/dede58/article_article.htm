@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="author" content="by www.dede58.com">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="{dede:global.cfg_cmspath/}/dede58/img/favicon.png">
+        <link rel="apple-touch-icon" href="{dede:global.cfg_cmspath/}/dede58/img/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="{dede:global.cfg_cmspath/}/dede58/img/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="{dede:global.cfg_cmspath/}/dede58/img/apple-touch-icon-114x114.png">
+        
+        <!-- Load Core CSS 
+        =====================================-->
+        <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/core/bootstrap.min.css">
+        <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/core/animate.min.css">
+        <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/demo.css">
+        
+        <!-- Load Main CSS 
+        =====================================-->
+        <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/main/main.min.css">
+        
+        <!-- Load Magnific Popup CSS 
+        =====================================-->
+        <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/magnific/magic.min.css">        
+        <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/magnific/magnific-popup.css">              
+        <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/magnific/magnific-popup-zoom-gallery.css">
+        
+        <!-- Load OWL Carousel CSS 
+        =====================================-->
+        <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/owl-carousel/owl.carousel.css">
+        <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/owl-carousel/owl.theme.css">
+        <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/owl-carousel/owl.transitions.css">
+       
+        <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/color/{dede:global.color/}.css">
+       
+        
+      
+        <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/icon/font-awesome.css">
+        <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/icon/et-line-font.css">
+        
+        <!-- Load JS
+        HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+        WARNING: Respond.js doesn't work if you view the page via file://
+        =====================================-->
+
+        <!--[if lt IE 9]>
+          <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body  id="topPage" data-spy="scroll" data-target=".navbar" data-offset="100">
+        
+        <!-- Page Loader
+        ===================================== -->
+		<div id="pageloader">
+			<div class="loader-item">
+                <img src="{dede:global.cfg_cmspath/}/dede58/img/other/puff.svg" alt="{dede:global.cfg_webname/}">
+            </div>
+		</div>
+        
+        
+        <!-- Navigation Area
+        ===================================== -->
+       {dede:include filename="head.htm"/}
+        
+
+     <div class="bg-grad-stellar pt100 pb75">
+            <div class="container">
+                <div class="row text-center mb35">
+                    <h1 class="color-light font-montserrat mt75">
+                        {dede:field.title/}
+                        <small class="color-light alpha8" style="font-size:12px;">时间：{dede:field.pubdate function="MyDate('Y-m-d',@me)"/}&nbsp;&nbsp; 点击：<span id="hits"><script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script>&nbsp;&nbsp;栏目：{dede:field name='typename'/}</small>
+                    </h1>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12 bg-light content-box-o-no-border mb30" style="padding:50px;">
+                        {dede:field.body/}
+                    </div>
+
+                  
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <!-- footer Area
+        ===================================== -->
+        
+         {dede:include filename="footer.htm"/}
+        
+        <!-- JQuery Core
+        =====================================-->
+        <script src="{dede:global.cfg_cmspath/}/dede58/js/core/jquery.min.js"></script>
+        <script src="{dede:global.cfg_cmspath/}/dede58/js/core/bootstrap.min.js"></script>
+        
+        <!-- Magnific Popup
+        =====================================-->
+        <script src="{dede:global.cfg_cmspath/}/dede58/js/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="{dede:global.cfg_cmspath/}/dede58/js/magnific-popup/magnific-popup-zoom-gallery.js"></script>
+        
+        <!-- Progress Bars
+        =====================================-->
+        <script src="{dede:global.cfg_cmspath/}/dede58/js/progress-bar/bootstrap-progressbar.js"></script>
+        <script src="{dede:global.cfg_cmspath/}/dede58/js/progress-bar/bootstrap-progressbar-main.js"></script>        
+
+        <!-- Text Rotator
+        =====================================-->
+        <script src="{dede:global.cfg_cmspath/}/dede58/js/text-rotator/jquery.simple-text-rotator.min.js"></script>
+        
+        <!-- JQuery Main
+        =====================================-->
+        <script src="{dede:global.cfg_cmspath/}/dede58/js/main/jquery.appear.js"></script>
+        <script src="{dede:global.cfg_cmspath/}/dede58/js/main/isotope.pkgd.min.js"></script>
+        <script src="{dede:global.cfg_cmspath/}/dede58/js/main/parallax.min.js"></script>
+        <script src="{dede:global.cfg_cmspath/}/dede58/js/main/jquery.countTo.js"></script>
+        <script src="{dede:global.cfg_cmspath/}/dede58/js/main/owl.carousel.min.js"></script>
+        <script src="{dede:global.cfg_cmspath/}/dede58/js/main/jquery.sticky.js"></script>
+        <script src="{dede:global.cfg_cmspath/}/dede58/js/main/ion.rangeSlider.min.js"></script>
+        <script src="{dede:global.cfg_cmspath/}/dede58/js/main/main.js"></script>
+
+    </body>
+</html>
