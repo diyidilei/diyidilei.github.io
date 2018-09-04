@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>搜索结果页 - {dede:global.cfg_webname/}</title>
+<meta charset="utf-8">
+<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<!-- Css -->
+<link rel="stylesheet" href="/dede58/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/dede58/css/magnific-popup.css" />
+<link rel="stylesheet" href="/dede58/css/font-icons.css" />
+<link rel="stylesheet" href="/dede58/revolution/css/settings.css" />
+<link rel="stylesheet" href="/dede58/css/rev-slider.css" />
+<link rel="stylesheet" href="/dede58/css/sliders.css" />
+<link rel="stylesheet" href="/dede58/css/style.css" />
+<link rel="stylesheet" href="/dede58/css/responsive.css" />
+<link rel="stylesheet" href="/dede58/css/spacings.css" />
+<link rel="stylesheet" href="/dede58/css/animate.min.css" />
+<link rel="stylesheet" href="/dede58/css/colors/color-mint.css" />
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="/dede58/img/favicon.ico">
+<link rel="apple-touch-icon" href="/dede58/img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/dede58/img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/dede58/img/apple-touch-icon-114x114.png">
+</head>
+
+<body>
+
+<!-- Preloader -->
+<div class="loader-mask">
+  <div class="loader">
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<!-- Navigation --> 
+{dede:include filename="head.htm"/}
+<div class="main-wrapper oh"> 
+  
+  <!-- Page Title -->
+  <section class="page-title text-center" style="background-image: url(/dede58/img/blog/blog_title_bg.jpg);">
+    <div class="container relative clearfix">
+      <div class="title-holder">
+        <div class="title-text">
+          <h1 class="color-white">搜索结果页</h1>
+          <ol class="breadcrumb">
+            <li style="color:#FFFFFF">搜索内容：{dede:global name='keyword' function='RemoveXSS(@me)'/}</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end page title --> 
+  
+  <!-- Blog Standard -->
+  <section class="section-wrap blog-standard bg-light">
+    <div class="container relative">
+      <div class="row"> 
+        
+        <!-- content -->
+        <div class="col-md-9 col-sm-8 blog-content"> {dede:list perpage='12' infolen='160'}
+          <div class="entry-item">
+            <div class="entry">
+              <h2 class="entry-title"> <a href="[field:arcurl/]" >[field:title/]</a> </h2>
+              <ul class="entry-meta">
+                <li class="entry-date"> <i class="fa fa-calendar-o"></i><a href="[field:arcurl/]">[field:pubdate function="MyDate('Y-m-d',@me)"/]</a> </li>
+                <li class="entry-author"> <i class="fa fa-user"></i><a href="[field:arcurl/]">[field:writer/]</a> </li>
+                <li> <i class="fa fa-comments"></i><a href="[field:arcurl/]" class="entry-comments">[field:click/] views</a> </li>
+                <li class="entry-category"> <i class="fa fa-bookmark"></i><a href="[field:arcurl/]">[field:typename/]</a> </li>
+              </ul>
+              <div class="entry-content">
+                <p>[field:infos/]</p>
+                <a href="[field:arcurl/]" class="btn btn-stroke btn-md">Read More</a> </div>
+            </div>
+          </div>
+          {/dede:list} 
+          <!-- Pagination -->
+          <nav class="clear">
+            <div class="fl dede_pages">
+              <ul class="pagelist">
+                {dede:pagelist listsize='4'/}
+              </ul>
+            </div>
+            <!-- /pages --> 
+          </nav>
+        </div>
+        <!-- end col --> 
+        
+        <!-- sidebar -->
+        <div class="col-md-3 col-sm-4 sidebar blog-sidebar mt-sml-50">
+          <form class="relative" action="/plus/search.php">
+            <input class="searchbox" placeholder="搜索" type="text" name="q">
+            <select name="searchtype" class="search-option" id="search-option" type="hidden" style="display:none">
+              <option value="title" selected='1'>检索标题</option>
+              <option value="titlekeyword">智能模糊</option>
+            </select>
+            <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+          </form>
+          
+          <!-- Categories -->
+          <div class="widget categories">
+            <h3 class="widget-title">网站栏目</h3>
+            <ul>
+              {dede:channel}
+              <li><a href="[field:arcurl/]"  >[field:typename/]</a></li>
+              {/dede:channel}
+            </ul>
+          </div>
+          <div class="widget latest-posts">
+            <h3 class="widget-title">最新新闻</h3>
+            <ul>
+              {dede:arclist titlelen='44' row='4' typeid ='2'}
+              <li class="clearfix"> <a href="[field:arcurl/]" target="_blank">[field:title/]</a>
+                <ul class="entry-meta">
+                  <li class="entry-date"> <i class="fa fa-calendar-o"></i><a href="[field:arcurl/]">[field:pubdate function="MyDate('Y-m-d',@me)"/]</a> </li>
+                </ul>
+              </li>
+              {/dede:arclist}
+            </ul>
+          </div>
+        </div>
+        <!-- end col --> 
+        
+      </div>
+      <!-- end row --> 
+    </div>
+    <!-- end container --> 
+  </section>
+  <!-- end blog standard --> 
+  
+  <!-- Footer --> 
+  {dede:include filename="footer.htm"/} </div>
+<!-- end main-wrapper --> 
+
+<!-- jQuery Scripts --> 
+<script type="text/javascript" src="/dede58/js/jquery.min.js"></script> 
+<script type="text/javascript" src="/dede58/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="/dede58/js/plugins.js"></script> 
+<script type="text/javascript" src="/dede58/revolution/js/jquery.themepunch.tools.min.js"></script> 
+<script type="text/javascript" src="/dede58/revolution/js/jquery.themepunch.revolution.min.js"></script> 
+<script type="text/javascript" src="/dede58/js/rev-slider.js"></script> 
+<script type="text/javascript" src="/dede58/js/scripts.js"></script>
+</body>
+</html>

@@ -1,925 +1,631 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>{dede:global.cfg_webname/} by www.dede58.com</title>
+<title>{dede:global.cfg_webname/}</title>
 <meta name="description" content="{dede:global.cfg_description/}" />
 <meta name="keywords" content="{dede:global.cfg_keywords/}" />
 <meta name="author" content="order by dede58.com" />
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="description" content="">
+
+<!-- Google Fonts -->
+
+<!-- Css -->
+<link rel="stylesheet" href="/dede58/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/dede58/css/magnific-popup.css" />
+<link rel="stylesheet" href="/dede58/css/font-icons.css" />
+<link rel="stylesheet" href="/dede58/revolution/css/settings.css" />
+<link rel="stylesheet" href="/dede58/css/rev-slider.css" />
+<link rel="stylesheet" href="/dede58/css/sliders.css" />
+<link rel="stylesheet" href="/dede58/css/style.css" />
+<link rel="stylesheet" href="/dede58/css/responsive.css" />
+<link rel="stylesheet" href="/dede58/css/spacings.css" />
+<link rel="stylesheet" href="/dede58/css/animate.min.css" />
+<link rel="stylesheet" href="/dede58/css/colors/color-mint.css" />
 
 <!-- Favicons -->
-<link rel="shortcut icon" href="{dede:global.cfg_cmspath/}/dede58/img/favicon.png">
-<link rel="apple-touch-icon" href="{dede:global.cfg_cmspath/}/dede58/img/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="{dede:global.cfg_cmspath/}/dede58/img/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="{dede:global.cfg_cmspath/}/dede58/img/apple-touch-icon-114x114.png">
-
-<!-- Load Core CSS 
-        =====================================-->
-<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/core/bootstrap.min.css">
-<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/core/animate.min.css">
-<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/demo.css">
-
-<!-- Load Main CSS 
-        =====================================-->
-<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/main/main.min.css">
-
-<!-- Load Magnific Popup CSS 
-        =====================================-->
-<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/magnific/magic.min.css">
-<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/magnific/magnific-popup.css">
-<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/magnific/magnific-popup-zoom-gallery.css">
-
-<!-- Load OWL Carousel CSS 
-        =====================================-->
-<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/owl-carousel/owl.carousel.css">
-<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/owl-carousel/owl.theme.css">
-<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/owl-carousel/owl.transitions.css">
-<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/color/{dede:global.color/}.css">
-<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/icon/font-awesome.css">
-<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/dede58/css/icon/et-line-font.css">
-
-<!-- Load JS
-        HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
-        WARNING: Respond.js doesn't work if you view the page via file://
-        =====================================-->
-
-<!--[if lt IE 9]>
-          <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
+<link rel="shortcut icon" href="/dede58/img/favicon.ico">
+<link rel="apple-touch-icon" href="/dede58/img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/dede58/img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/dede58/img/apple-touch-icon-114x114.png">
 </head>
-<body  id="page-top" data-spy="scroll" data-target=".navbar" data-offset="100">
 
-<!-- Page Loader
-        ===================================== -->
-<div id="pageloader">
-  <div class="loader-item"> <img src="{dede:global.cfg_cmspath/}/dede58/img/other/puff.svg" alt="{dede:global.cfg_webname/}"> </div>
+<body>
+
+<!-- Preloader -->
+<div class="loader-mask">
+  <div class="loader">
+    <div></div>
+    <div></div>
+  </div>
 </div>
 
-<!-- Navigation Area
-        ===================================== --> 
-{dede:include filename="head.htm"/} 
-
-<!-- Intro Area
-        ===================================== -->
-<header class="intro pt100 pb100 parallax-window" data-parallax="scroll" data-speed="0.5" data-image-src="{dede:global.cfg_cmspath/}/dede58/img/bg/img-bg-1.jpg">
-  <div class="intro-body">
+<!-- Navigation --> 
+{dede:include filename="head.htm"/}
+<div class="main-wrapper oh"> 
+  
+  <!-- Revolution Slider -->
+  <section>
+    <div class="rev_slider_wrapper">
+      <div class="rev_slider" id="slider4" data-version="5.0">
+        <ul>
+          <!-- SLIDE 1 -->
+          <li data-fstransition="fade"
+							data-transition="scaledownfrombottom"
+							data-easein="default" 
+							data-easeout="default"
+							data-slotamount="1"
+							data-masterspeed="1200"
+							data-delay="8000"
+							data-title="百度幻灯一"
+							> 
+            <!-- MAIN IMAGE --> 
+            <img src="/dede58/img/revolution/animated_slide_1.jpg"
+								alt=""
+								data-bgrepeat="no-repeat"
+								data-bgfit="cover"
+								data-bgparallax="7"
+								class="rev-slidebg"
+								> 
+            
+            <!-- LAYER NR. 1 -->
+            <div class="tp-caption tp-shape tp-shapewrapper hero-line rs-parallaxlevel-8"
+								data-x="center"
+								data-y="center"
+								data-voffset="-161"
+								data-width="870"
+								data-height="4"
+								data-transform_idle="o:1;s:900;"
+								data-transform_in="sX:0;opacity:0;s:1500;e:Power3.easeOut;"
+								data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;"
+								data-start="1500"
+								style="background-color:rgba(255, 255, 255, 0.5);"> </div>
+            
+            <!-- LAYER NR. 1 -->
+            <div class="tp-caption hero-text size-95 nocaps rs-parallaxlevel-8"
+								data-x="center"
+								data-y="center"
+								data-voffset="[-30,-30,-30,-20]"
+								data-fontsize="[95,85,75,45]"
+								data-transform_idle="o:1;s:1000"
+								data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;"
+								data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;"
+								data-start="1000"
+								data-splitout="none">百度官网 </div>
+            
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption medium-text rs-parallaxlevel-8"
+								data-x="center"
+								data-y="center"
+								data-voffset="[60,60,60,50]"
+								data-width="[none, none, none, 300]"
+								data-whitespace="[nowrap, nowrap, nowrap, normal]"
+								data-transform_idle="o:1;s:900"
+								data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;"
+								data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;"
+								data-start="1200"
+								style="text-align: center;">我们致力于打造一个优秀的建站资源共享学习平台 </div>
+            
+            <!-- LAYER NR. 5 -->
+            <div class="tp-caption tp-shape tp-shapewrapper hero-line rs-parallaxlevel-8"
+								data-x="center"
+								data-y="center"
+								data-voffset="159"
+								data-width="870"
+								data-height="4"
+								data-transform_idle="o:1;s:900;"
+								data-transform_in="sX:0;opacity:0;s:1500;e:Power3.easeOut;"
+								data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;"
+								data-start="1500"
+								style="background-color:rgba(255, 255, 255, 0.5);"> </div>
+          </li>
+          <!-- end slide 1 --> 
+          
+          <!-- SLIDE 2 -->
+          <li data-transition="scaledownfrombottom"
+							data-easein="default" 
+							data-easeout="default"
+							data-slotamount="1"
+							data-masterspeed="1200"
+							data-delay="8000"
+							data-title="百度幻灯二"
+							> 
+            <!-- MAIN IMAGE --> 
+            <img src="/dede58/img/revolution/animated_slide_3.jpg"
+								alt=""
+								data-bgrepeat="no-repeat"
+								data-bgfit="cover"
+								data-bgparallax="7"
+								class="rev-slidebg"
+								> 
+            
+            <!-- LAYER NR. 1 -->
+            <div class="tp-caption hero-text size-95 nocaps"
+								data-x="center"
+								data-y="center"
+								data-voffset="-40"
+								data-fontsize="[95,85,75,45]"
+								data-transform_idle="o:1;s:1000"
+								data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;"
+								data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;"
+								data-start="1000"
+								data-splitout="none">百度平台 </div>
+            
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption small-text size-2"
+								data-x="center"
+								data-y="center"
+								data-hoffset="0"
+								data-voffset="40"
+								data-width="[none, none, none, 300]"
+								data-whitespace="[nowrap, nowrap, nowrap, normal]"
+								data-transform_idle="o:1;s:900"
+								data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;"
+								data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;"
+								data-start="1200"
+								style="text-align: center;">百度专业提供网站模板，网页模板，教程培训等建站资源。我们致力于打造一个优秀的建站资源共享学习平台。 </div>
+            
+            <!-- LAYER NR. 3 -->
+            <div class="tp-caption tp-resizeme"
+								data-x="center"
+								data-y="center"
+								data-voffset="110"
+								data-hoffset="-73"
+								data-transform_idle="o:1;s:700"
+								data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;"
+								data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;"
+								data-start="1400"
+								style="min-width: 140px;"><a href='http://www.baidu.com/' class='btn btn-md btn-white'>访问官网</a> </div>
+            
+            <!-- LAYER NR. 4 -->
+            <div class="tp-caption tp-resizeme"
+								data-x="center"
+								data-y="center"
+								data-voffset="110"
+								data-hoffset="80"
+								data-transform_idle="o:1;s:700"
+								data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;"
+								data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;"
+								data-start="1400"
+								style="z-index: 13; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='btn btn-md btn-transparent'>模板下载</a> </div>
+          </li>
+          <!-- end slide 2 --> 
+          
+          <!-- SLIDE 3 -->
+          <li data-transition="scaledownfrombottom"
+							data-easein="default" 
+							data-easeout="default"
+							data-slotamount="1"
+							data-masterspeed="1200"
+							data-delay="8000"
+							data-title="百度幻灯三"
+							> 
+            <!-- MAIN IMAGE --> 
+            <img src="/dede58/img/revolution/onepage_slide_3.jpg"
+								alt=""
+								data-bgrepeat="no-repeat"
+								data-bgfit="cover"
+								data-bgparallax="7"
+								class="rev-slidebg"
+								> 
+            
+            <!-- LAYER NR. 1 -->
+            <div class="tp-caption medium-text size-24 nocaps alt-font-2"
+								data-x="center"
+								data-y="center"
+								data-voffset="-85"
+								data-width="[none, none, none, 300]"
+								data-whitespace="[nowrap, nowrap, nowrap, normal]"
+								data-transform_idle="o:1;s:1000"
+								data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;"
+								data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;"
+								data-start="1000"
+								style="text-align: center;">我们致力于打造一个优秀的建站资源共享学习平台</i> </div>
+            
+            <!-- LAYER NR. 1 -->
+            <div class="tp-caption hero-text size-95"
+								data-x="center"
+								data-y="center"
+								data-voffset="0"
+								data-fontsize="[95,85,75,45]"
+								data-width="[none, none, none, 300]"
+								data-whitespace="[nowrap, nowrap, nowrap, normal]"
+								data-transform_idle="o:1;s:900"
+								data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;"
+								data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;"
+								data-start="1200"
+								style="text-align: center;">www.baidu.com </div>
+            
+            <!-- LAYER NR. 4 -->
+            <div class="tp-caption tp-resizeme"
+								data-x="center"
+								data-y="center"
+								data-voffset="100"
+								data-hoffset="0"
+								data-transform_idle="o:1;s:800"
+								data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;"
+								data-transform_out="opacity:0;s:1000;e:Power3.easeInOut;"
+								data-start="1400"
+								style="z-index: 12; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='btn btn-lg btn-color'>充值会员</a> </div>
+          </li>
+          <!-- end slide 3 -->
+          
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Benefits -->
+  <section class="section-wrap services style-3 pb-90 pt-60 pt-sml-40 pb-sml-70">
     <div class="container">
       <div class="row">
-        <div class="col-md-8 col-md-offset-2  mt-100">
-          <h1 class="brand-heading text-capitalize font-pacifico mt-100 color-light animated" data-animation="fadeInUp" data-animation-delay="100"> 提供 <i class="fa fa-heart color-pasific"></i> <span class="rotate mr10">网站模板, 网站素材, 建站培训 </span> 等资源 </h1>
-          <p class="intro-text mt25 color-gray animated" data-animation="fadeInUp" data-animation-delay="200">织梦58专业提供网站模板，网页模板，培训教程，网站素材等建站资源<br>
-            我们致为于打造优秀的建站资源共享平台！ </p>
-          <a class="button button-pasific button-lg hover-ripple-out animated" data-animation="fadeInUp" data-animation-delay="300" href="http://www.dede58.com/" target="_blank">浏览官网</a> </div>
-      </div>
-    </div>
-    <div class="intro-direction"> <a href="#welcome">
-      <div class="mouse-icon">
-        <div class="wheel"></div>
-      </div>
-      </a> </div>
-  </div>
-</header>
-
-<!-- Welcome Area
-        ===================================== -->
-<div id="welcome" class="pt75">
-  <div class="container">
-    <div class="row"> 
-      
-      <!-- title start -->
-      <div class="col-md-12 text-center">
-        <h1 class="font-size-normal"> <small>www.dede58.com</small> 建站资源共享学习平台 <small class="heading heading-solid center-block"></small> </h1>
-      </div>
-      <!-- title end --> 
-      
-      <!-- title description start -->
-      <div class="col-md-8 col-md-offset-2 text-center">
-        <p> 织梦58（www.dede58.com）专业提供网站模板，网页模板，教程培训，程序插件，网站素材等建站资源。我们致力于打造一个优秀的建站资源共享学习平台！ </p>
-      </div>
-      <!-- title description end --> 
-    </div>
-    <div class="row mt50"> 
-      
-      <!-- item one start -->
-      <div class="col-md-3 col-sm-6 col-xs-6 animated" data-animation="fadeInLeft" data-animation-delay="100">
-        <div class="content-box content-box-center"> <span class="icon-layers color-pasific"></span>
-          <h5>网站模板</h5>
-          <p>提供网站模板，网页模板，教程培训，程序插件，网站素材等建站资源</p>
+        <div class="col-md-4 service-item text-center mt-40">
+          <div class="service-item-box nopadding"> <i class="icon icon-mobile"></i>
+            <h3>网站模板</h3>
+            <p>百度专业提供网站模板，网页模板，教程培训，程序插件，网站素材等建站资源。我们致力于打造一个优秀的建站资源共享学习平台。</p>
+          </div>
         </div>
-      </div>
-      <!-- item one end --> 
-      
-      <!-- item two start -->
-      <div class="col-md-3 col-sm-6 col-xs-6 animated" data-animation="fadeInLeft" data-animation-delay="200">
-        <div class="content-box content-box-center"> <span class="icon-mobile color-pasific"></span>
-          <h5>在线视频</h5>
-          <p>从零开始系统全面的教你如何建立一个属于自己的网站</p>
-        </div>
-      </div>
-      <!-- item two end --> 
-      
-      <!-- item three start -->
-      <div class="col-md-3 col-sm-6 col-xs-6 animated" data-animation="fadeInRight" data-animation-delay="300">
-        <div class="content-box content-box-center"> <span class="icon-camera color-pasific"></span>
-          <h5>在线培训</h5>
-          <p>织梦58老师通过QQ群远程教学，全面系统的给大家讲解建站知识</p>
-        </div>
-      </div>
-      <!-- item three end --> 
-      
-      <!-- item four start -->
-      <div class="col-md-3 col-sm-6 col-xs-6 animated" data-animation="fadeInRight" data-animation-delay="400">
-        <div class="content-box content-box-center"> <span class="icon-briefcase color-pasific"></span>
-          <h5>技术支持</h5>
-          <p>我们每天5X8小时QQ在线提供顾问式指导</p>
-        </div>
-      </div>
-      <!-- item four start --> 
-      
-    </div>
-  </div>
-</div>
-
-<!-- Portfolio Area
-        ===================================== -->
-<div id="portfolioGrid">
-  <div class="pt50">&nbsp;</div>
-  <div class="container-fluid bg-gray pt30">
-    <div class="row">
-      <div class="col-md-12"> 
+        <!-- end service item -->
         
-        <!-- filters start -->
-        <ul class="filters text-center  mt25 mb50">
-          <li><a class="active" data-filter="*">所有产品</a></li>
-          {dede:channel type='son' typeid='3'}
-          <li><a data-filter=".[field:typename/]">[field:typename/]</a></li>
-          {/dede:channel}
-        </ul>
-        <!-- filters end -->
+        <div class="col-md-4 service-item text-center mt-40">
+          <div class="service-item-box nopadding"> <i class="icon icon-layers"></i>
+            <h3>视频教程</h3>
+            <p>百度专业提供网站模板，网页模板，教程培训，程序插件，网站素材等建站资源。我们致力于打造一个优秀的建站资源共享学习平台。</p>
+          </div>
+        </div>
+        <!-- end service item -->
         
-        <div class="portfolio center-block"> {dede:arclist titlelen='20' row='8' typeid ='3' infolen='50'}
-          <div class="portfolio-item col-lg-3 col-md-4 col-sm-6 col-xs-12 [field:typename/]" data-category=""> <a href="[field:picname/]" class="magnific-popup"> <span class="glyphicon glyphicon-search hover-bounce-out"></span> </a> <img src="[field:picname/]" alt="[field:title/]" class="img-responsive" height="200"> </div>
+        <div class="col-md-4 service-item text-center mt-40">
+          <div class="service-item-box nopadding"> <i class="icon icon-speedometer"></i>
+            <h3>在线培训</h3>
+            <p>百度专业提供网站模板，网页模板，教程培训，程序插件，网站素材等建站资源。我们致力于打造一个优秀的建站资源共享学习平台。</p>
+          </div>
+        </div>
+        <!-- end service item --> 
+        
+      </div>
+    </div>
+  </section>
+  <!-- end benefits --> 
+  
+  <!-- Video Section -->
+  <section class="section-wrap nopadding services style-1" id="services" style="background-image:url(/dede58/img/services_bg.jpg);">
+    <div class="container-fluid nopadding">
+      <div class="col-md-3 nopadding service-item"> <a href="#" class="service-item-box text-center">
+        <div class="service-title"> <i class="icon icon-tools"></i>
+          <h3>网站设计</h3>
+          <p class="service-descr">百度专业提供网站模板，网页模板，教程培训，网站素材等建站资源。我们致力于打造一个优秀的建站资源共享学习平台。</p>
+        </div>
+        </a> </div>
+      <!-- end service item -->
+      
+      <div class="col-md-3 nopadding service-item"> <a href="#" class="service-item-box text-center">
+        <div class="service-title"> <i class="icon icon-strategy"></i>
+          <h3>手机应用</h3>
+          <p class="service-descr">百度专业提供网站模板，网页模板，教程培训，网站素材等建站资源。我们致力于打造一个优秀的建站资源共享学习平台。</p>
+        </div>
+        </a> </div>
+      <!-- end service item -->
+      
+      <div class="col-md-3 nopadding service-item"> <a href="#" class="service-item-box text-center">
+        <div class="service-title"> <i class="icon icon-linegraph"></i>
+          <h3>程序开发</h3>
+          <p class="service-descr">百度专业提供网站模板，网页模板，教程培训，网站素材等建站资源。我们致力于打造一个优秀的建站资源共享学习平台。</p>
+        </div>
+        </a> </div>
+      <!-- end service item -->
+      
+      <div class="col-md-3 nopadding service-item"> <a href="#" class="service-item-box text-center">
+        <div class="service-title"> <i class="icon icon-lifesaver"></i>
+          <h3>平面设计</h3>
+          <p class="service-descr">百度专业提供网站模板，网页模板，教程培训，网站素材等建站资源。我们致力于打造一个优秀的建站资源共享学习平台。</p>
+        </div>
+        </a> </div>
+      <!-- end service item --> 
+      
+    </div>
+  </section>
+  
+  <!-- Promo Features -->
+  <section class="section-wrap device-features style-2 pt-140 pt-mdm-80 pb-mdm-70">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4 wow slideInLeft" data-wow-duration="1s" data-wow-delay="0.1s">
+          <div class="features-item features-right text-right">
+            <h5>dedecms模板</h5>
+            <p>百度专业提供网站模板，网页模板，教程培训，程序插件，网站素材等建站资源。我们致力于打造一个优秀的建站资源共享学习平台。</p>
+          </div>
+          <!-- end features item -->
+          
+          <div class="features-item features-right text-right">
+            <h5>discuz模板</h5>
+            <p>百度专业提供网站模板，网页模板，教程培训，程序插件，网站素材等建站资源。我们致力于打造一个优秀的建站资源共享学习平台。</p>
+          </div>
+          <!-- end features item -->
+          
+          <div class="features-item features-right text-right">
+            <h5>phpcms模板</h5>
+            <p>百度专业提供网站模板，网页模板，教程培训，程序插件，网站素材等建站资源。我们致力于打造一个优秀的建站资源共享学习平台。</p>
+          </div>
+          <!-- end features item --> 
+        </div>
+        <!-- end left column-->
+        
+        <div class="promo-device col-md-4 text-center">
+          <div class="row"> <img src="/dede58/img/ipad_promo_2.png" class="hidden-sm hidden-xs" alt=""> <img src="/dede58/img/ipad_promo_mobile.png" class="hidden-lg hidden-md" alt=""> </div>
+        </div>
+        
+        <!-- start right column -->
+        <div class="col-md-4 wow slideInRight" data-wow-duration="1s" data-wow-delay="0.1s">
+          <div class="features-item">
+            <h5>wordpress模板</h5>
+            <p>百度专业提供网站模板，网页模板，教程培训，程序插件，网站素材等建站资源。我们致力于打造一个优秀的建站资源共享学习平台。</p>
+          </div>
+          <!-- end features item -->
+          
+          <div class="features-item">
+            <h5>phpwind模板</h5>
+            <p>百度专业提供网站模板，网页模板，教程培训，程序插件，网站素材等建站资源。我们致力于打造一个优秀的建站资源共享学习平台。</p>
+          </div>
+          <!-- end features item -->
+          
+          <div class="features-item last">
+            <h5>html5模板</h5>
+            <p>百度专业提供网站模板，网页模板，教程培训，程序插件，网站素材等建站资源。我们致力于打造一个优秀的建站资源共享学习平台。</p>
+          </div>
+          <!-- end features item --> 
+        </div>
+        <!-- end right column--> 
+        
+      </div>
+    </div>
+  </section>
+  <!-- end features --> 
+  
+  <!-- Mission / Vision / Results -->
+  <section class="section-wrap bg-light pb-90">
+    <div class="container">
+      <div class="row"> {dede:arclist titlelen='34' row='3' typeid ='19' infolen='88'}
+        <div class="col-md-4 mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s"> <img src="[field:picname/]" alt="[field:fulltitle/]" class="img-fw" style="height:250px;">
+          <div class="feature-box">
+            <h4>[field:title/]</h4>
+            <p>[field:infos/]</p>
+            <a href="[field:arcurl/]">Read More</a> </div>
+        </div>
+        {/dede:arclist} </div>
+    </div>
+  </section>
+  <!-- end mission/vision/results --> 
+  
+  <!-- Selected Works -->
+  <section class="section-wrap bg-dark pt-90">
+    <div class="container-fluid nopadding">
+      <div class="row mb-80">
+        <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+          <h2 class="text-center color-white">案例产品</h2>
+        </div>
+      </div>
+      <div class="row nomargin">
+        <div id="portfolio-container" class="works-grid"> {dede:arclist titlelen='42' row='8' typeid ='3' infolen='48'}
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 work-item hover-2 nopadding nomargin web-design mockups">
+            <div class="work-container">
+              <div class="work-img"> <img src="[field:picname/]" alt="[field:fulltitle/]" style="height:250px;"/>
+                <div class="portfolio-overlay">
+                  <div class="project-icons"> <a href="[field:picname/]" class="lightbox-gallery"><i class="fa fa-search"></i></a> <a href="[field:typeurl/]" class="project-icon"><i class="fa fa-link"></i></a> </div>
+                </div>
+                <div class="work-description">
+                  <h3><a href="[field:typeurl/]" class="dark-link">[field:title/]</a></h3>
+                  <span><a href="[field:typeurl/]">[field:infos/]</a></span> </div>
+              </div>
+            </div>
+          </div>
           {/dede:arclist} </div>
-        <!-- portfolio end --> 
-        
+        <!-- end portfolio container --> 
       </div>
-      <!-- col-md-12 end --> 
-    </div>
-    <!-- row end --> 
-  </div>
-  <!-- container end --> 
-</div>
-<!-- section portfolio end --> 
-
-<!-- Team Area
-        ===================================== -->
-<div id="team" class="pt75">
-  <div class="container"> 
-    
-    <!-- title and short description start -->
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <h1 class="font-size-normal"> <small>About Team</small> 优秀的设计团队 <small class="heading heading-solid center-block"></small> </h1>
-      </div>
-      <div class="col-md-8 col-md-offset-2 text-center">
-        <p class="lead"> 织梦58专业提供网站模板，网页模板，教程培训，程序插件，网站素材等建站资源。我们致力于打造一个优秀的建站资源共享学习平台！ </p>
+      <!-- end row -->
+      
+      <div class="row mt-60">
+        <div class="col-md-12 text-center"> <a href="/a/anni/" class="btn btn-lg btn-color">Load More</a> </div>
       </div>
     </div>
-    <!-- title and short description end --> 
-    
-  </div>
-</div>
-<!-- section team end --> 
-
-<!-- Skill Area
-        ===================================== -->
-<div id="progressBar2">
-  <div class="container pt50 pb75">
-    <div class="row"> 
-      
-      <!-- left skill start -->
-      <div class="col-sm-6 col-md-6">
-        <h5 class="text-uppercase font-montserrat color-dark text-center mb25">平面设计</h5>
-        
-        <!-- skill one start -->
-        <h5 class="text-right">Adobe Photoshop</h5>
-        <div class="progress progress-xs progress-circle right">
-          <div class="progress-bar bg-primary" role="progressbar" data-transitiongoal="40"></div>
+    <!-- end container --> 
+  </section>
+  <!-- end portfolio--> 
+  
+  <!-- Service-tabs -->
+  <section class="section-wrap services pb-50">
+    <div class="container">
+      <h2 class="text-center bottom-line">在线培训</h2>
+      <div class="row mt-30">
+        <div class="tabs services-tabs">
+          <ul class="nav nav-tabs">
+            <li class="active col-sm-2 col-xs-4 text-center"> <a href="#tab-one" data-toggle="tab"><i class="icon-search"></i>网站建设视频教程</a> </li>
+            <li class="col-sm-2 col-xs-4 text-center"> <a href="#tab-two" data-toggle="tab"><i class="icon-expand"></i>Discuz视频教程</a> </li>
+            <li class="col-sm-2 col-xs-4 text-center"> <a href="#tab-three" data-toggle="tab"><i class="icon-tools-2"></i>织梦视频教程</a> </li>
+            <li class="col-sm-2 col-xs-4 text-center"> <a href="#tab-four" data-toggle="tab"><i class="icon-speedometer"></i>DIV+CSS教程</a> </li>
+            <li class="col-sm-2 col-xs-4 text-center"> <a href="#tab-five" data-toggle="tab"><i class="icon-tools"></i>Photoshop教程</a> </li>
+            <li class="col-sm-2 col-xs-4 text-center"> <a href="#tab-six" data-toggle="tab"><i class="icon-puzzle"></i>Dreamwear视频教程</a> </li>
+          </ul>
         </div>
-        <!-- skill one end --> 
-        
-        <!-- skill two start -->
-        <h5 class="text-right">Adobe Illustrator</h5>
-        <div class="progress progress-sm progress-circle right">
-          <div class="progress-bar bg-success" role="progressbar" data-transitiongoal="60"></div>
-        </div>
-        <!-- skill two end --> 
-        
-        <!-- skill three start -->
-        <h5 class="text-right">Adobe InDesign</h5>
-        <div class="progress progress-md progress-circle right">
-          <div class="progress-bar bg-info" role="progressbar" data-transitiongoal="80"></div>
-        </div>
-        <!-- skill three end --> 
-        
-        <!-- skill four start -->
-        <h5 class="text-right">Sketch</h5>
-        <div class="progress progress-lg progress-circle right">
-          <div class="progress-bar bg-pasific" role="progressbar" data-transitiongoal="95"></div>
-        </div>
-        <!-- skill four end --> 
-      </div>
-      <!-- left skill end --> 
-      
-      <!-- right skill start -->
-      <div class="col-sm-6 col-md-6">
-        <h5 class="text-uppercase font-montserrat color-dark text-center mb25">模板开发</h5>
-        
-        <!-- skill five start -->
-        <h5>Wordpress</h5>
-        <div class="progress progress-circle progress-xs">
-          <div class="progress-bar bg-primary" role="progressbar" data-transitiongoal="40"></div>
-        </div>
-        <!-- skill five end --> 
-        
-        <!-- skill six start -->
-        <h5>Dedecms</h5>
-        <div class="progress progress-circle progress-sm">
-          <div class="progress-bar bg-success" role="progressbar" data-transitiongoal="60"></div>
-        </div>
-        <!-- skill six end --> 
-        
-        <!-- skill seven start -->
-        <h5>Discuz</h5>
-        <div class="progress progress-circle progress-md">
-          <div class="progress-bar bg-info" role="progressbar" data-transitiongoal="80"></div>
-        </div>
-        <!-- skill seven end --> 
-        
-        <!-- skill eight start -->
-        <h5>Phpcms</h5>
-        <div class="progress progress-circle progress-lg">
-          <div class="progress-bar bg-pasific" role="progressbar" data-transitiongoal="95"></div>
-        </div>
-        <!-- skill eight end --> 
-      </div>
-      <!-- right skill end --> 
-      
-    </div>
-    <!-- row end --> 
-  </div>
-  <!-- container end --> 
-</div>
-<!-- section skill end --> 
-
-<!-- Fun Fact Area
-        ===================================== -->
-<div id="fact" class="bg-grad-stellar pt100 pb100">
-  <div class="container"> 
-    
-    <!-- title and short description start -->
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2 text-center mb50">
-        <h1 class="font-size-normal color-light"> <small class="color-light">Your Business Partner</small> 公司业务范围和合作伙伴 </h1>
       </div>
     </div>
-    <!-- title and short description end -->
-    
-    <div class="row"> 
-      
-      <!-- fun fact left start -->
-      <div class="col-md-3">
-        <div class="row"> 
-          
-          <!-- fun fact one start -->
-          <div class="col-md-12 col-sm-6 col-xs-6">
-            <div class="fact">
-              <div class="fact-number timer" data-perc="387"> <span class="factor color-light"></span> </div>
-              <span class="fact-title color-light alpha7">网站模板</span> </div>
+  </section>
+  <section class="section-wrap services-content bg-light pb-80 pt-90">
+    <div class="container"> 
+      <!-- tab content -->
+      <div class="tab-content nopadding">
+        <div class="tab-pane fade in active" id="tab-one">
+          <div class="row">
+            <div class="col-md-5">
+              <p class="text-lg"> 百度（www.baidu.com）成立于2010年，至今已经发展成为国内最大的模板分享平台，为广大网站建设从业者提供了方便和帮助。
+                我们拥有大量优质的建站资源，资源市场价值上万元。在这里聚集了大量网络从业人员，提供来自全国各地、不同行业的资源与人脉。 </p>
+            </div>
+            <div class="col-md-6 col-md-offset-1 services-info">
+              <p>从零开始系统全面的教你如何建立一个属于自己的网站并实现盈利。课程涉及网站搭建，网站SEO，模板开发等最新建站技术</p>
+              <p> 百度老师通过QQ群远程教学，全面系统的给大家讲解建站知识。内容涉及网站搭建，网站优化，模板开发等最新建站技术。自己搭建一个网站并开发一套模板，碰到不理解或不会的，可以咨询我们在线QQ辅导员，我们每天8小时在线提供顾问式指导。</p>
+            </div>
           </div>
-          <!-- fun fact one end --> 
-          
-          <!-- fun fact two start -->
-          <div class="col-md-12 col-sm-6 col-xs-6">
-            <div class="fact">
-              <div class="fact-number timer" data-perc="578"> <span class="factor color-light"></span> </div>
-              <span class="fact-title color-light alpha7">网站会员</span> </div>
+        </div>
+        <div class="tab-pane fade" id="tab-two">
+          <div class="row">
+            <div class="col-md-5">
+              <p class="text-lg"> 百度（www.baidu.com）成立于2010年，至今已经发展成为国内最大的模板分享平台，为广大网站建设从业者提供了方便和帮助。
+                我们拥有大量优质的建站资源，资源市场价值上万元。在这里聚集了大量网络从业人员，提供来自全国各地、不同行业的资源与人脉。 </p>
+            </div>
+            <div class="col-md-6 col-md-offset-1 services-info">
+              <p>从零开始系统全面的教你如何建立一个属于自己的网站并实现盈利。课程涉及网站搭建，网站SEO，模板开发等最新建站技术</p>
+              <p> 百度老师通过QQ群远程教学，全面系统的给大家讲解建站知识。内容涉及网站搭建，网站优化，模板开发等最新建站技术。自己搭建一个网站并开发一套模板，碰到不理解或不会的，可以咨询我们在线QQ辅导员，我们每天8小时在线提供顾问式指导。</p>
+            </div>
           </div>
-          <!-- fun fact two end --> 
-          
+        </div>
+        <div class="tab-pane fade" id="tab-three">
+          <div class="row">
+            <div class="col-md-5">
+              <p class="text-lg"> 百度（www.baidu.com）成立于2010年，至今已经发展成为国内最大的模板分享平台，为广大网站建设从业者提供了方便和帮助。
+                我们拥有大量优质的建站资源，资源市场价值上万元。在这里聚集了大量网络从业人员，提供来自全国各地、不同行业的资源与人脉。 </p>
+            </div>
+            <div class="col-md-6 col-md-offset-1 services-info">
+              <p>从零开始系统全面的教你如何建立一个属于自己的网站并实现盈利。课程涉及网站搭建，网站SEO，模板开发等最新建站技术</p>
+              <p> 百度老师通过QQ群远程教学，全面系统的给大家讲解建站知识。内容涉及网站搭建，网站优化，模板开发等最新建站技术。自己搭建一个网站并开发一套模板，碰到不理解或不会的，可以咨询我们在线QQ辅导员，我们每天8小时在线提供顾问式指导。</p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="tab-four">
+          <div class="row">
+            <div class="col-md-5">
+              <p class="text-lg"> 百度（www.baidu.com）成立于2010年，至今已经发展成为国内最大的模板分享平台，为广大网站建设从业者提供了方便和帮助。
+                我们拥有大量优质的建站资源，资源市场价值上万元。在这里聚集了大量网络从业人员，提供来自全国各地、不同行业的资源与人脉。 </p>
+            </div>
+            <div class="col-md-6 col-md-offset-1 services-info">
+              <p>从零开始系统全面的教你如何建立一个属于自己的网站并实现盈利。课程涉及网站搭建，网站SEO，模板开发等最新建站技术</p>
+              <p> 百度老师通过QQ群远程教学，全面系统的给大家讲解建站知识。内容涉及网站搭建，网站优化，模板开发等最新建站技术。自己搭建一个网站并开发一套模板，碰到不理解或不会的，可以咨询我们在线QQ辅导员，我们每天8小时在线提供顾问式指导。</p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="tab-five">
+          <div class="row">
+            <div class="col-md-5">
+              <p class="text-lg"> 百度（www.baidu.com）成立于2010年，至今已经发展成为国内最大的模板分享平台，为广大网站建设从业者提供了方便和帮助。
+                我们拥有大量优质的建站资源，资源市场价值上万元。在这里聚集了大量网络从业人员，提供来自全国各地、不同行业的资源与人脉。 </p>
+            </div>
+            <div class="col-md-6 col-md-offset-1 services-info">
+              <p>从零开始系统全面的教你如何建立一个属于自己的网站并实现盈利。课程涉及网站搭建，网站SEO，模板开发等最新建站技术</p>
+              <p> 百度老师通过QQ群远程教学，全面系统的给大家讲解建站知识。内容涉及网站搭建，网站优化，模板开发等最新建站技术。自己搭建一个网站并开发一套模板，碰到不理解或不会的，可以咨询我们在线QQ辅导员，我们每天8小时在线提供顾问式指导。</p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="tab-six">
+          <div class="row">
+            <div class="col-md-5">
+              <p class="text-lg"> 百度（www.baidu.com）成立于2010年，至今已经发展成为国内最大的模板分享平台，为广大网站建设从业者提供了方便和帮助。
+                我们拥有大量优质的建站资源，资源市场价值上万元。在这里聚集了大量网络从业人员，提供来自全国各地、不同行业的资源与人脉。 </p>
+            </div>
+            <div class="col-md-6 col-md-offset-1 services-info">
+              <p>从零开始系统全面的教你如何建立一个属于自己的网站并实现盈利。课程涉及网站搭建，网站SEO，模板开发等最新建站技术</p>
+              <p> 百度老师通过QQ群远程教学，全面系统的给大家讲解建站知识。内容涉及网站搭建，网站优化，模板开发等最新建站技术。自己搭建一个网站并开发一套模板，碰到不理解或不会的，可以咨询我们在线QQ辅导员，我们每天8小时在线提供顾问式指导。</p>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- fun fact left end --> 
+      <!-- end tab content --> 
       
-      <!-- fun fact right start -->
-      <div class="col-md-3 col-md-push-6">
-        <div class="row"> 
-          
-          <!-- fun fact three start -->
-          <div class="col-md-12 col-sm-6 col-xs-6">
-            <div class="fact">
-              <div class="fact-number timer" data-perc="175"> <span class="factor color-light"></span> </div>
-              <span class="fact-title color-light alpha7">钻石VIP</span> </div>
-          </div>
-          <!-- fun fact three end --> 
-          
-          <!-- fun fact four start -->
-          <div class="col-md-12 col-sm-6 col-xs-6">
-            <div class="fact">
-              <div class="fact-number timer" data-perc="350"> <span class="factor color-light"></span> </div>
-              <span class="fact-title color-light alpha7">客户案例</span> </div>
-          </div>
-          <!-- fun fact four end --> 
-          
+    </div>
+  </section>
+  <!-- end service-tabs --> 
+  
+  <!-- Results -->
+  <section class="result-boxes section-wrap pt-sml-50" style="background-image: url(/dede58/img/results_bg.jpg)">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">
+          <div class="statistic result-box text-center"> <span class="timer" data-from="0" data-to="1200"></span> <span class="counter-text">网站素材</span> </div>
+        </div>
+        <!-- end first result box -->
+        
+        <div class="col-sm-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+          <div class="statistic result-box text-center"> <span class="timer" data-from="0" data-to="578"></span> <span class="counter-text">钻石VIP会员</span> </div>
+        </div>
+        <!-- end second result box -->
+        
+        <div class="col-sm-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+          <div class="statistic result-box text-center"> <span class="timer" data-from="0" data-to="2489"></span> <span class="counter-text">网站模板</span> </div>
+        </div>
+        <!-- end third result box -->
+        
+        <div class="col-sm-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+          <div class="statistic result-box text-center"> <span class="timer" data-from="0" data-to="1329"></span> <span class="counter-text">VIP会员</span> </div>
+        </div>
+        <!-- end fourth result box --> 
+        
+      </div>
+    </div>
+  </section>
+  <!-- end results--> 
+  
+  <!-- From Blog -->
+  <section class="section-wrap from-blog style-2 pb-90 bg-light">
+    <div class="container">
+      <div class="row mb-60">
+        <div class="col-md-12 text-center"> <span class="subheading">www.baidu.com</span>
+          <h2>新闻中心</h2>
         </div>
       </div>
-      <!-- fun fact right end -->
-      
-      <div class="col-md-6 col-md-pull-3"> <img src="{dede:global.cfg_cmspath/}/dede58/img/other/map.png" alt="macbook" class="img-responsive"> </div>
-    </div>
-  </div>
-  <!-- container end --> 
-</div>
-<!-- section fun fact end --> 
-
-<!-- Features Area
-        ===================================== -->
-<div id="features" class="pt75 mb25">
-  <div class="container"> 
-    
-    <!-- title and short description start -->
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <h1 class="font-size-normal"> <small>Amazing Features</small> 集团企业发展历程 <small class="heading heading-solid center-block"></small> </h1>
-      </div>
-      <div class="col-md-8 col-md-offset-2 text-center">
-        <p class="lead"> 织梦58专业提供网站模板，网页模板，教程培训，程序插件，网站素材等建站资源。我们致力于打造一个优秀的建站资源共享学习平台！ </p>
-      </div>
-    </div>
-    <!-- title and short description end --> 
-    
-  </div>
-  <!-- container end --> 
-</div>
-<!-- section feature end --> 
-
-<!-- SVG Cart Area
-        ===================================== -->
-<div class="svg-container2"> 
-  <!-- svg start --> 
-  <svg id="svgLine" xmlns="http://www.w3.org/2000/svg" version="1.1" 
-                 width="100%" height="300" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2000 250" preserveAspectRatio="xMinYMax">
-  <polygon points="-150,300 200,90 550,140 800,60 1100,150 1400,100 1700,10 1900,50 2500,90 2500,300" 
-                         fill="url(#BglinierGradient)" stroke="none"> </polygon>
-  <polyline points="-150,244 200,90 550,140 800,60 1100,150 1400,100 1700,10 1900,50 2500,90 2500,500" 
-                          fill="none" stroke="#7668af" stroke-width="0"> </polyline>
-  <text x="170" y="20" fill="#8b949b" style="font-size: 120%; font-weight: 400;">Lines of Code</text>
-  <text x="170" y="60" fill="#5cb85c" style="font-size: 250%; font-weight: 300;">120K</text>
-  <text x="510" y="60" fill="#8b949b" style="font-size: 120%; font-weight: 400;">Shortcodes</text>
-  <text x="520" y="100" fill="#5f6467" style="font-size: 250%; font-weight: 300;">750</text>
-  <text x="760" y="0" fill="#8b949b" style="font-size: 120%; font-weight: 400;">Icons Included</text>
-  <text x="760" y="40" fill="#b2cc71" style="font-size: 250%; font-weight: 300;">2000+</text>
-  <text x="1060" y="70" fill="#8b949b" style="font-size: 120%; font-weight: 400;">Happy Clients</text>
-  <text x="1060" y="110" fill="#3c88c6" style="font-size: 250%; font-weight: 300;">950</text>
-  <text x="1350" y="30" fill="#8b949b" style="font-size: 120%; font-weight: 400;">Item Sales</text>
-  <text x="1350" y="70" fill="#1abc9c" style="font-size: 250%; font-weight: 300;">5,780</text>
-  <text x="1650" y="90" fill="#333333" style="font-size: 140%; font-weight: 300; font-family: 'Pacifico', cursive;">Counting..</text>
-  <ellipse id="svg_1" rx="15" ry="15" cx="200" cy="90" fill="#5cb85c" stroke="#ffffff" stroke-width="5"></ellipse>
-  <ellipse id="svg_2" rx="10" ry="10" cx="550" cy="140" fill="#5f6467" stroke="#ffffff" stroke-width="5"></ellipse>
-  <ellipse id="svg_3" rx="15" ry="15" cx="800" cy="60" fill="#b2cc71" stroke="#ffffff" stroke-width="5"></ellipse>
-  <ellipse id="svg_4" rx="15" ry="15" cx="1100" cy="150" fill="#3c88c6" stroke="#ffffff" stroke-width="5"></ellipse>
-  <ellipse id="svg_5" rx="10" ry="10" cx="1400" cy="100" fill="#1abc9c" stroke="#ffffff" stroke-width="5"></ellipse>
-  <ellipse id="svg_6" rx="10" ry="10" cx="1700" cy="10" fill="#a85ad4" stroke="#ffffff" stroke-width="5"></ellipse>
-  <ellipse id="svg_7" rx="9" ry="9" cx="1900" cy="50" fill="#ff8b34" stroke="#ffffff" stroke-width="5"></ellipse>
-  <ellipse id="svg_8" rx="6" ry="6" cx="2500" cy="90" fill="#fd40b3" stroke="#ffffff" stroke-width="5"></ellipse>
-  <ellipse id="svg_9" rx="6" ry="6" cx="2200" cy="90" fill="#fd3635" stroke="#ffffff" stroke-width="5"></ellipse>
-  <defs>
-    <lineargradient id="BglinierGradient" x1="0" y1="0" x2="0" y2="1">
-      <stop id="BgLinierGradientStop_1" stop-opacity="1" stop-color="#e8f3f5" offset="0"></stop>
-      <stop id="BgLinierGradientStop_2" stop-opacity="1" stop-color="#e8f3f5" offset="1"></stop>
-    </lineargradient>
-  </defs>
-  </svg> 
-  <!-- svg end --> 
-</div>
-<!-- svg container end --> 
-
-<!-- Achievement Area
-        ===================================== -->
-<div class="pt50" style="background: url({dede:global.cfg_cmspath/}/dede58/img/bg/bg-wood.jpg) 100% 100% repeat-x #e8f3f5;">
-  <div class="container"> 
-    
-    <!-- title and short description start -->
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="font-source-sans-pro text-center mb50"> <small class="heading heading-icon heading-icon-rounded bg-grad-stellar center-block"> <i class="fa fa-trophy color-light"></i> </small> 织梦58成为模板行业第一的分享平台 <small class="heading-desc text-lowercase color-dark"> Every day, We makes thousands of customers happy. </small> </h2>
-      </div>
-    </div>
-    <!-- title and short description end -->
-    
-    <div class="row mb50 text-center">
-      <div class="col-sm-12"> <i class="fa fa-android fa-3x mr20 color-green"></i> <i class="fa fa-apple fa-4x mr20 color-dark"></i> <i class="fa fa-amazon fa-4x mr20 color-red"></i> <i class="fa fa-windows fa-3x color-purple"></i> </div>
-    </div>
-    <div class="col-md-12"> <img src="{dede:global.cfg_cmspath/}/dede58/img/other/img-other-6.png" alt="device" class="img-responsive center-block"> </div>
-  </div>
-  <!-- container end --> 
-</div>
-<!-- section achievment end --> 
-
-<!-- Info Area
-        ===================================== -->
-<div id="Info-1" class="bg-gray pt30 bb-solid-1">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2 text-center pb35">
-        <h4>我们致力于打造一个优秀的建站资源共享学习平台</h4>
-        <a class="button button-md button-blue hover-ripple-out mr10">联系我们</a> <a class="button button-md button-pasific hover-ripple-out">服务中心</a> </div>
-    </div>
-  </div>
-</div>
-
-<!-- General Content Area
-        ===================================== -->
-<div id="general-content-1" class="pt100 pb100">
-  <div class="container">
-    <div class="row"> 
-      
-      <!-- left content start -->
-      <div class="col-md-5">
-        <div class="general-content">
-          <h3 class="mb25"> <small class="color-red">www.dede58.com</small> 提供各种网站模板下载 </h3>
-          <p>织梦58（www.dede58.com）专业提供网站模板，网页模板，网站源码，网站素材，网页特效等网页设计素材免费下载。我们致力于打造一个优秀的建站资源共享学习平台。要出售自己的得意模板、插件、教程？欢迎您来这里交易，找到需要她、欣赏她的人。苦苦寻觅某套模板、迫切希望得到设计帮助？这里或许能很快解决您的问题。</p>
-          <a class="button button-md button-pasific hover-ripple-out" href="http://www.dede58.com/">模板下载</a>
-          <div class="clearfix"></div>
-        </div>
-      </div>
-      <!-- left content end --> 
-      
-      <!-- right content start -->
-      <div class="col-md-5 col-md-push-1"> <img src="{dede:global.cfg_cmspath/}/dede58/img/other/img-other-1.png" alt="browser iphone" class="img-responsive pull-right"> </div>
-      <!-- right content end --> 
-      
-    </div>
-  </div>
-</div>
-
-<!-- General Content Area
-        ===================================== -->
-<div id="general-content-2" class="bg-gray pt100 pb100">
-  <div class="container">
-    <div class="row"> 
-      
-      <!-- left content start -->
-      <div class="col-md-6"> <img src="{dede:global.cfg_cmspath/}/dede58/img/other/img-other-2.png" alt="browser iphone" class="img-responsive center-block"> </div>
-      <!-- left content end --> 
-      
-      <!-- right content start -->
-      <div class="col-md-5 col-md-push-1">
-        <div class="general-content">
-          <h3 class="mb25"> <small class="color-red">www.dede58.com</small> 远程QQ在线建站培训 </h3>
-          <p>从零开始系统全面的教你如何建立一个属于自己的网站并实现盈利。课程涉及网站搭建，网站SEO，模板开发等最新建站技术。认识html语言，div+css布局等一些建站基础知识。织梦58老师通过QQ群远程教学，全面系统的给大家讲解建站知识。内容涉及网站搭建，网站优化，模板开发等最新建站技术。</p>
-          <a class="button button-md button-pasific hover-ripple-out">Purchase Now</a>
-          <div class="clearfix"></div>
-        </div>
-      </div>
-      <!-- right content end --> 
-      
-    </div>
-    <!-- row end --> 
-  </div>
-  <!-- container end --> 
-</div>
-<!-- section general info end --> 
-
-<!-- Price Area
-        ===================================== -->
-<div id="price" class="bg-grad-stellar pt75 pb30">
-  <div class="container pb50"> 
-    
-    <!-- title start -->
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2 text-center mb50">
-        <h1 class="font-size-normal color-light"> <small class="color-light">Service Prices</small> 织梦58会员价格表 </h1>
-      </div>
-    </div>
-    <!-- title start -->
-    
-    <div class="row"> 
-      
-      <!-- table price one start -->
-      <div class="col-md-3 col-sm-6 col-xs-12 hover-float">
-        <div class="price price-three">
-          <div class="price-header"> <span class="color-green"><sup>$</sup>100</span>
-            <h4>白银VIP</h4>
-          </div>
-          <div class="price-body">
-            <ul>
-              <li>Two Web Designs</li>
-              <li>Unlimited Revision</li>
-              <li>Free One Year Domain</li>
-              <li>Free Six Months Hosting</li>
-              <li>Free Installation</li>
-              <li>Full Support</li>
+      {dede:arclist titlelen='30' row='3' typeid ='3' infolen='144'}
+      <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">
+        <div class="blog-col">
+          <div class="entry-img"> <img src="[field:picname/]" alt="[field:fulltitle/]" style="height:220px;"/> </div>
+          <div class="entry-box">
+            <h4 class="entry-title"><a href="[field:arcurl/]" target="_blank">[field:title/]</a></h4>
+            <ul class="entry-meta">
+              <li>[field:pubdate function="MyDate('Y-m-d',@me)"/]</li>
+              <li><a href="[field:arcurl/]">[field:click/] 查看</a></li>
             </ul>
+            <div class="entry-content">
+              <p>[field:infos/]</p>
+              <a href="[field:arcurl/]" class="btn btn-sm btn-dark">Read More</a> </div>
           </div>
-          <div class="price-footer"> <a href="#" class="button button-sm button-rounded button-green hover-ripple-out">立即购买</a> </div>
         </div>
       </div>
-      <!-- table price one end --> 
-      
-      <!-- table price two start -->
-      <div class="col-md-3 col-sm-6 col-xs-12 hover-float">
-        <div class="price price-three">
-          <div class="price-badge bg-grad-blood-mary">热门</div>
-          <div class="price-header"> <span class="color-success"><sup>$</sup>200</span>
-            <h4>黄金VIP</h4>
-          </div>
-          <div class="price-body">
-            <ul>
-              <li>Two Web Designs</li>
-              <li>Unlimited Revision</li>
-              <li>Free One Year Domain</li>
-              <li>Free Six Months Hosting</li>
-              <li>Free Installation</li>
-              <li>Full Support</li>
-            </ul>
-          </div>
-          <div class="price-footer"> <a href="#" class="button button-sm button-rounded button-success hover-ripple-out">立即购买</a> </div>
-        </div>
-      </div>
-      <!-- table price two end --> 
-      
-      <!-- table price three start -->
-      <div class="col-md-3 col-sm-6 col-xs-12 hover-float">
-        <div class="price price-three">
-          <div class="price-header"> <span class="color-cyan"><sup>$</sup>500</span>
-            <h4>白金VIP</h4>
-          </div>
-          <div class="price-body">
-            <ul>
-              <li>Two Web Designs</li>
-              <li>Unlimited Revision</li>
-              <li>Free One Year Domain</li>
-              <li>Free Six Months Hosting</li>
-              <li>Free Installation</li>
-              <li>Full Support</li>
-            </ul>
-          </div>
-          <div class="price-footer"> <a href="#" class="button button-sm button-rounded button-cyan hover-ripple-out">立即购买</a> </div>
-        </div>
-      </div>
-      <!-- table price three end --> 
-      
-      <!-- table price four start -->
-      <div class="col-md-3 col-sm-6 col-xs-12 hover-float">
-        <div class="price price-three">
-          <div class="price-badge bg-grad-stellar">推荐</div>
-          <div class="price-header"> <span class="color-blue"><sup>$</sup>800</span>
-            <h4>钻石VIP</h4>
-          </div>
-          <div class="price-body">
-            <ul>
-              <li>Two Web Designs</li>
-              <li>Unlimited Revision</li>
-              <li>Free One Year Domain</li>
-              <li>Free Six Months Hosting</li>
-              <li>Free Installation</li>
-              <li>Full Support</li>
-            </ul>
-          </div>
-          <div class="price-footer"> <a href="#" class="button button-sm button-rounded button-blue hover-ripple-out">Order Now</a> </div>
-        </div>
-      </div>
-      <!-- table price four end --> 
-      
-    </div>
-    <!-- row end -->
-    
-    <div class="row text-center mt50">
-      <h4 class="color-light">如有疑问，可电话联系我们: <i class="fa fa-phone"></i> 400-888-8888</h4>
-    </div>
-  </div>
-  <!-- container end --> 
-</div>
-<!-- section price end --> 
-
-<!-- Blog Area
-        ===================================== -->
-<div id="blogs" class="bg-gray pt75 pb75">
-  <div class="container"> 
-    
-    <!-- title start -->
-    <div class="row text-center mb25">
-      <h1 class="font-size-normal"> <small>News Center</small> 公司最新新闻动态 <small class="heading heading-solid center-block"></small> </h1>
-    </div>
-    <!-- title end -->
-    
-    <div class="row"> {dede:arclist titlelen='30' row='3' typeid ='2' infolen='110'}
-      <div class="col-md-4 col-sm-6 col-xs-12 mb50">
-        <div class="blog-one">
-          <div class="blog-one-header"> <img src="[field:picname/]" alt="[field:title/]" class="img-responsive" style="height:220px; width:100%"> </div>
-          <div class="blog-one-attrib"> <img src="/dede58/img/other/photo-1.jpg" alt="photo blog" class="blog-author-photo"> <span class="blog-author-name">[field:writer/]</span> <span class="blog-date">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span> </div>
-          <div class="blog-one-body">
-            <h4 class="blog-title"><a href="[field:arcurl/]">[field:title/]</a></h4>
-            <p class=""> [field:infos/] </p>
-          </div>
-          <div class="blog-one-footer"> <a href="[field:arcurl/]">Read More</a> <i class="fa fa-heart"></i>[field:click/] </div>
-        </div>
-      </div>
+      <!-- end post --> 
       {/dede:arclist} </div>
-    <!-- row end --> 
-  </div>
-  <!-- container end --> 
-</div>
-<!-- section blog end --> 
-
-<!-- Newsletter Area
-        =====================================-->
-<div id="newsletter" class="bg-dark2 pt50 pb50">
+  </section>
+  <!-- end from blog --> 
+  
+  <!-- Call to Action --> 
+  <a href="http://www.baidu.com/" class="call-to-action style-3">
   <div class="container">
     <div class="row">
-      <div class="col-md-2">
-        <h4 class="color-light"> QQ邮件订阅 </h4>
-      </div>
-      <div class="col-md-10">
-        <form name="newsletter" action="http://list.qq.com/cgi-bin/qf_compose_send" target="_blank" method="post">
-          <div class="input-newsletter-container">
-            <input type="hidden" name="t" value="qf_booked_feedback">
-            <input type="hidden" name="id" value="79d7181ac4d8b0144664925406fa6b1ebc29568929546ae8">
-            <input type="text" onblur="if (value ==''){value='QQ邮箱'}" onfocus="if (value =='QQ邮箱'){value =''}" class="input-newsletter" placeholder="请输入你的QQ邮箱" value="" id="to" name="to" class="mail">
-          </div>
-          <input type="submit" value="立即订阅" class="button button-sm button-pasific hover-ripple-out">
-        </form>
-      </div>
+      <div class="col-md-12 text-center">
+        <h2 class="color-white mt-0">我们致为于打造优秀的建站资源共享平台</h2>
+        <i class="fa fa-chevron-right"></i> </div>
     </div>
-    <!-- row end --> 
   </div>
-  <!-- container end --> 
-</div>
-<!-- section newsletter end --> 
+  </a> 
+  
+  <!-- Footer --> 
+  {dede:include filename="footer.htm"/} </div>
+<!-- end main-wrapper --> 
 
-<!-- Testimonial Area
-        ===================================== -->
-<div id="testimonial" class="pt75 pb75">
-  <div class="container"> 
-    
-    <!-- title start -->
-    <div class="row text-center mb25">
-      <h1 class="font-size-normal"> <small>Testimonials</small> 客户评论 <small class="heading heading-solid center-block"></small> </h1>
-    </div>
-    <!-- title end -->
-    
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="row">
-          <div id="owlSectionThreeItem" class="owl-carousel"> 
-            
-            <!-- Testimonial Item start -->
-            <div class="testimonial testimonial-triangle-isosceles bottom-left">
-              <div class="testimonial-body">
-                <p> 在网上寻觅了很久很久。终于找到了这里。晃眼一看，好多漂亮的模板。下载了几个都很好用。希望越做越好，多提供些精品资源！ </p>
-              </div>
-              <div class="testimonial-footer"> <img src="{dede:global.cfg_cmspath/}/dede58/img/other/photo-1.jpg" alt="testimonial author" class="img-responsive img-circle"> <i class="fa fa-quote-left"></i> Martin Smith <a href="#">dede58.com </a> </div>
-            </div>
-            <!-- Testimonial Item end --> 
-            
-            <!-- Testimonial Item start -->
-            <div class="testimonial testimonial-triangle-isosceles bottom-left">
-              <div class="testimonial-body">
-                <p> 找了好久啊，一直想有一个这样的网站，找来找去，老感觉么有合适的。偶然间来到这儿，爽。找到啦！！！！ </p>
-              </div>
-              <div class="testimonial-footer"> <img src="{dede:global.cfg_cmspath/}/dede58/img/other/photo-2.jpg" alt="testimonial author" class="img-responsive img-circle"> <i class="fa fa-quote-left"></i> Steve Austin <a href="#">dede58.com </a> </div>
-            </div>
-            <!-- Testimonial Item end --> 
-            
-            <!-- Testimonial Item start -->
-            <div class="testimonial testimonial-triangle-isosceles bottom-left">
-              <div class="testimonial-body">
-                <p> 本站值得肯定的几点！
-                  
-                  1、资源较为优质 2、域名较为简洁 3、灵活应用了DZ的程序 </p>
-              </div>
-              <div class="testimonial-footer"> <img src="{dede:global.cfg_cmspath/}/dede58/img/other/photo-4.jpg" alt="testimonial author" class="img-responsive img-circle"> <i class="fa fa-quote-left"></i> Gisselse <a href="#">rv28.com </a> </div>
-            </div>
-            <!-- Testimonial Item end --> 
-            
-            <!-- Testimonial Item start -->
-            <div class="testimonial testimonial-triangle-isosceles bottom-left">
-              <div class="testimonial-body">
-                <p> 织梦58对于网站建设新手来说，是一个最好的平台，你可以随心找到你最喜欢的网站模板，做出你喜欢的网站。 </p>
-              </div>
-              <div class="testimonial-footer"> <img src="{dede:global.cfg_cmspath/}/dede58/img/other/photo-1.jpg" alt="testimonial author" class="img-responsive img-circle"> <i class="fa fa-quote-left"></i> Martin Smith <a href="#">dede58.com </a> </div>
-            </div>
-            <!-- Testimonial Item end --> 
-            
-            <!-- Testimonial Item start -->
-            <div class="testimonial testimonial-triangle-isosceles bottom-left">
-              <div class="testimonial-body">
-                <p> 找模板找了很久了，于是找到了织梦58，觉的这里的模板很不错，下载了两套试试，果然可以用。于是充值了，希望站长以后多多指点啊！ </p>
-              </div>
-              <div class="testimonial-footer"> <img src="{dede:global.cfg_cmspath/}/dede58/img/other/photo-2.jpg" alt="testimonial author" class="img-responsive img-circle"> <i class="fa fa-quote-left"></i> Steve Austin <a href="#">dede58.com </a> </div>
-            </div>
-            <!-- Testimonial Item end --> 
-            
-            <!-- Testimonial Item start -->
-            <div class="testimonial testimonial-triangle-isosceles bottom-left">
-              <div class="testimonial-body">
-                <p> 织梦58站长很友好，为我们这些新手站长提供这么多的模版。大家一起交流，才能成长得更快吧！感谢织梦58，感谢网友，你们辛苦了！ </p>
-              </div>
-              <div class="testimonial-footer"> <img src="{dede:global.cfg_cmspath/}/dede58/img/other/photo-4.jpg" alt="testimonial author" class="img-responsive img-circle"> <i class="fa fa-quote-left"></i> Goselle <a href="#">rv28.com </a> </div>
-            </div>
-            <!-- Testimonial Item end --> 
-            
-          </div>
-          <!-- owlSectionThreeItem end --> 
-        </div>
-        <!-- row end --> 
-      </div>
-      <!-- col end --> 
-      
-    </div>
-    <!-- row end --> 
-  </div>
-  <!-- container end --> 
-</div>
-<!-- section testimonial end --> 
+<!-- jQuery Scripts --> 
+<script type="text/javascript" src="/dede58/js/jquery.min.js"></script> 
+<script type="text/javascript" src="/dede58/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="/dede58/js/plugins.js"></script> 
+<script type="text/javascript" src="/dede58/revolution/js/jquery.themepunch.tools.min.js"></script> 
+<script type="text/javascript" src="/dede58/revolution/js/jquery.themepunch.revolution.min.js"></script> 
+<script type="text/javascript" src="/dede58/js/rev-slider.js"></script> 
+<script type="text/javascript" src="/dede58/js/scripts.js"></script> 
 
-<!-- Contact Us Area
-        =====================================-->
-<div id="contact" class="pt100 pb100 bg-grad-stellar">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="row"> 
-          
-          <!-- title start -->
-          <div class="col-md-12 mb50">
-            <h1 class="font-size-normal color-light"> <small class="color-light">Contact Us</small> 建站资源共享平台 </h1>
-            <h5 class="color-light">织梦58专业提供网站模板，网页模板，模板教程，网页制作，程序插件，网站素材等建站资源，我们致为于打造优秀的建站资源共享平台！ </h5>
-          </div>
-          <!-- title end --> 
-          
-          <!-- contact info start -->
-          <div class="col-md-3 col-sm-3 col-xs-12"> <span class="icon-map color-light el-icon2x"></span>
-            <h5 class="color-light"><strong>Address</strong></h5>
-            <p class="color-light">{dede:global.moke_adress/}</p>
-          </div>
-          <div class="col-md-3 col-sm-3 col-xs-6"> <span class="icon-megaphone color-light el-icon2x"></span>
-            <h5 class="color-light"><strong>Phone</strong></h5>
-            <p class="color-light">{dede:global.moke_phone/}</p>
-          </div>
-          <div class="col-md-3 col-sm-3 col-xs-6"> <span class="icon-envelope color-light el-icon2x"></span>
-            <h5 class="color-light"><strong>Email</strong></h5>
-            <p class="color-light">{dede:global.moke_email/}</p>
-          </div>
-          <!-- contact info end --> 
-          
-        </div>
-        <!-- row left end --> 
-      </div>
-      <!-- col left end -->
-      
-      <div class="col-md-6">
-        <div class="contact contact-us-one">
-          <div class="col-sm-12 col-xs-12 text-center mb20">
-            <h4 class="pb25 bb-solid-1 text-uppercase"> 在线留言 <small class="text-lowercase">我们致为于打造优秀的建站资源共享平台</small> </h4>
-          </div>
-          <form name="contact" method="post" enctype="multipart/form-data" action="/plus/diy.php">
-            <input type="hidden" value="post" name="action">
-            <input type="hidden" value="1" name="diyid">
-            <input type="hidden" value="2" name="do">
-            <!-- fullname start -->
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <div class="form-group">
-                <input type="text" class="input-md input-rounded form-control" placeholder="姓名" maxlength="100" name="name" required>
-              </div>
-            </div>
-            <!-- fullname end --> 
-            
-            <!-- email start -->
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <div class="form-group">
-                <input type="text" class="input-md input-rounded form-control" placeholder="email" maxlength="100" name="email" required>
-              </div>
-            </div>
-            <!-- email end --> 
-            
-            <!-- website start -->
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <div class="form-group">
-                <input type="text" class="input-md input-rounded form-control" placeholder="电话" name="phone" name="phone" maxlength="100">
-              </div>
-            </div>
-            <!-- website end --> 
-            
-            <!-- security start -->
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <div class="form-group">
-                <input type="text" class="input-md input-rounded form-control" placeholder="QQ" maxlength="100" name="qq" required>
-              </div>
-            </div>
-            <!-- security end --> 
-            
-            <!-- textarea start -->
-            <div class="col-sm-12">
-              <textarea class="form-control" rows="3" name="con"></textarea>
-            </div>
-            <!-- textarea end -->
-            <input type="hidden" value="name,text;email,text;con,multitext;phone,text;qq,text" name="dede_fields">
-            <input type="hidden" value="635d8e1eb61cdd5fc1a9a3356128bfdb" name="dede_fieldshash">
-            <!-- button start -->
-            <div class="col-sm-12 mt10 text-center">
-              <input type="submit" value="提 交" name="submit" class="button-3d button-md button-block button-pasific hover-ripple-out">
-            </div>
-            <!-- button end -->
-            
-          </form>
-        </div>
-        <!-- div contact end --> 
-      </div>
-      <!-- col end --> 
-      
-    </div>
-    <!-- row end --> 
-  </div>
-  <!-- container end --> 
-</div>
-<!-- section contact end --> 
-
-<!-- Clients Area
-        ===================================== -->
-<div id="client" class="bg-gray pt50 pb20">
-  <div class="container">
-    <div class="row"> 
-      
-      <!-- logo client start -->
-      <div class="col-md-2 col-sm-3 col-xs-4"> <img src="{dede:global.cfg_cmspath/}/dede58/img/brand/paypal-gray.png" alt="client logo" class="img-responsive center-block animated" data-animation="fadeIn" data-animation-delay="300"> </div>
-      <!-- logo client end --> 
-      
-      <!-- logo client start -->
-      <div class="col-md-2 col-sm-3 col-xs-4"> <img src="{dede:global.cfg_cmspath/}/dede58/img/brand/evernote-gray.png" alt="client logo" class="img-responsive center-block animated" data-animation="fadeIn" data-animation-delay="150"> </div>
-      <!-- logo client end --> 
-      
-      <!-- logo client start -->
-      <div class="col-md-2 col-sm-3 col-xs-4"> <img src="{dede:global.cfg_cmspath/}/dede58/img/brand/microsoft-gray.png" alt="client logo" class="img-responsive center-block animated" data-animation="fadeIn" data-animation-delay="100"> </div>
-      <!-- logo client end --> 
-      
-      <!-- logo client start -->
-      <div class="col-md-2 col-sm-3 col-xs-4"> <img src="{dede:global.cfg_cmspath/}/dede58/img/brand/smashing-gray.png" alt="client logo" class="img-responsive center-block animated" data-animation="fadeIn" data-animation-delay="150"> </div>
-      <!-- logo client end --> 
-      
-      <!-- logo client start -->
-      <div class="col-md-2 col-sm-3 col-xs-4"> <img src="{dede:global.cfg_cmspath/}/dede58/img/brand/mashable-gray.png" alt="client logo" class="img-responsive center-block animated" data-animation="fadeIn" data-animation-delay="200"> </div>
-      <!-- logo client end --> 
-      
-      <!-- logo client start -->
-      <div class="col-md-2 col-sm-3 col-xs-4"> <img src="{dede:global.cfg_cmspath/}/dede58/img/brand/guardian-gray.png" alt="client logo" class="img-responsive center-block animated" data-animation="fadeIn" data-animation-delay="300"> </div>
-      <!-- logo client end --> 
-      
-    </div>
-    <!-- row end --> 
-  </div>
-  <!-- container end --> 
-</div>
-<!-- section clients end --> 
-
-<!-- footer Area
-        ===================================== --> 
-
-{dede:include filename="footer.htm"/} 
-
-<!-- JQuery Core
-        =====================================--> 
-<script src="{dede:global.cfg_cmspath/}/dede58/js/core/jquery.min.js"></script> 
-<script src="{dede:global.cfg_cmspath/}/dede58/js/core/bootstrap.min.js"></script> 
-
-<!-- Magnific Popup
-        =====================================--> 
-<script src="{dede:global.cfg_cmspath/}/dede58/js/magnific-popup/jquery.magnific-popup.min.js"></script> 
-<script src="{dede:global.cfg_cmspath/}/dede58/js/magnific-popup/magnific-popup-zoom-gallery.js"></script> 
-
-<!-- Progress Bars
-        =====================================--> 
-<script src="{dede:global.cfg_cmspath/}/dede58/js/progress-bar/bootstrap-progressbar.js"></script> 
-<script src="{dede:global.cfg_cmspath/}/dede58/js/progress-bar/bootstrap-progressbar-main.js"></script> 
-
-<!-- Text Rotator
-        =====================================--> 
-<script src="{dede:global.cfg_cmspath/}/dede58/js/text-rotator/jquery.simple-text-rotator.min.js"></script> 
-
-<!-- JQuery Main
-        =====================================--> 
-<script src="{dede:global.cfg_cmspath/}/dede58/js/main/jquery.appear.js"></script> 
-<script src="{dede:global.cfg_cmspath/}/dede58/js/main/isotope.pkgd.min.js"></script> 
-<script src="{dede:global.cfg_cmspath/}/dede58/js/main/parallax.min.js"></script> 
-<script src="{dede:global.cfg_cmspath/}/dede58/js/main/jquery.countTo.js"></script> 
-<script src="{dede:global.cfg_cmspath/}/dede58/js/main/owl.carousel.min.js"></script> 
-<script src="{dede:global.cfg_cmspath/}/dede58/js/main/jquery.sticky.js"></script> 
-<script src="{dede:global.cfg_cmspath/}/dede58/js/main/ion.rangeSlider.min.js"></script> 
-<script src="{dede:global.cfg_cmspath/}/dede58/js/main/main.js"></script>
+<!-- Rev Slider Offline Scripts --> 
+<script type="text/javascript" src="/dede58/revolution/js/extensions/revolution.extension.video.min.js"></script> 
+<script type="text/javascript" src="/dede58/revolution/js/extensions/revolution.extension.carousel.min.js"></script> 
+<script type="text/javascript" src="/dede58/revolution/js/extensions/revolution.extension.slideanims.min.js"></script> 
+<script type="text/javascript" src="/dede58/revolution/js/extensions/revolution.extension.actions.min.js"></script> 
+<script type="text/javascript" src="/dede58/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script> 
+<script type="text/javascript" src="/dede58/revolution/js/extensions/revolution.extension.kenburn.min.js"></script> 
+<script type="text/javascript" src="/dede58/revolution/js/extensions/revolution.extension.navigation.min.js"></script> 
+<script type="text/javascript" src="/dede58/revolution/js/extensions/revolution.extension.migration.min.js"></script> 
+<script type="text/javascript" src="/dede58/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
 </body>
 </html>

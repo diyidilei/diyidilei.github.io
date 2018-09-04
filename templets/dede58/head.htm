@@ -1,32 +1,75 @@
-
-<nav class="navbar navbar-pasific navbar-mp megamenu navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fa fa-bars"></i> </button>
-      <a class="navbar-brand page-scroll" href="#page-top"> <img src="{dede:global.cfg_cmspath/}/dede58/img/logo/logo-default.png" alt="{dede:global.cfg_webname/}"> dede58 </a> </div>
-    <div class="navbar-collapse collapse navbar-main-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="/">网站首页 </a></li>
-        <li><a href="/a/guanyuwomen/" >关于我们 </a></li>
-        <li><a href="/a/fuwuzhongxin/" >服务中心 </a></li>
-        <li><a href="/a/tuanduirenyuan/" >团队展示 </a></li>
-        <li class="dropdown"><a href="/a/news/" class="dropdown-toggle color-light">新闻中心 </a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="/a/news/chanpindongtai/">产品动态</a></li>
-            <li><a href="/a/news/gongsixinwen/">公司新闻</a></li>
-            <li><a href="/a/news/xingyezhishi/">行业知识</a></li>
-          </ul>
-        </li>
-        <li class="dropdown"><a href="/a/anni/" class="dropdown-toggle color-light">产品展示 </a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="/a/anni/pingmian/">平面设计</a></li>
-            <li><a href="/a/anni/shouji/">手机应用</a></li>
-            <li ><a href="/a/anni/websj/">网页设计</a></li>
-          </ul>
-        </li>
-        <li ><a href="/a/lianxiwomen/" >联系我们 </a> </li>
-        <li ><a href="http://www.dede58.com/" >织梦58 </a> </li>
-      </ul>
+<link rel="stylesheet" href="/dede58/css/colors/color-{dede:global.moke_color/}.css" />
+<header class="nav-type-2">
+  <nav class="navbar navbar-static-top">
+    <div class="navigation">
+      <div class="container relative">
+        <form method="get" class="search-wrap" action="/plus/search.php">
+          <input type="search" class="form-control" placeholder="输入内容，回车搜索" name="q">
+          <select name="searchtype" class="search-option" id="search-option" type="hidden" style="display:none">
+            <option value="title" selected='1'>检索标题</option>
+            <option value="titlekeyword">智能模糊</option>
+          </select>
+        </form>
+        <div class="row">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            
+            <!-- Logo -->
+            <div class="logo-container">
+              <div class="logo-wrap local-scroll"> <a href="/#home"> <img class="logo" src="/dede58/img/logo_dark.png" alt="{dede:global.cfg_webname/}"> </a> </div>
+            </div>
+          </div>
+          <!-- end navbar-header -->
+          
+          <div class="col-md-9 nav-wrap">
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown"> <a href="/">网站首页</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/index2.html">首页样式2</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"> <a href="/a/news/" >新闻中心</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/a/news/chanpindongtai/">产品动态</a></li>
+                    <li><a href="/a/news/gongsixinwen/">公司新闻</a></li>
+                    <li><a href="/a/news/xingyezhishi/">行业知识</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"> <a href="/a/anni/" >案例产品</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/a/anni/pingmian/">平面设计</a></li>
+                    <li><a href="/a/anni/shouji/">手机应用</a></li>
+                    <li><a href="/a/anni/websj/">网页设计</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"> <a href="/a/fuwuzhongxin/">服务中心</a> </li>
+                <li class="dropdown"> <a href="/a/guanyuwomen/">关于我们</a> </li>
+                <li class="dropdown"> <a href="/a/lianxiwomen/">联系我们</a> </li>
+                <li id="mobile-search">
+                  <form method="get" class="mobile-search" action="/plus/search.php">
+                    <input type="search" class="form-control" placeholder="搜索..." name="q">
+                    <select name="searchtype" class="search-option" id="search-option" type="hidden" style="display:none">
+                      <option value="title" selected='1'>检索标题</option>
+                      <option value="titlekeyword">智能模糊</option>
+                    </select>
+                    <button type="submit" class="search-button"> <i class="fa fa-search"></i> </button>
+                  </form>
+                </li>
+                <li> <a href="#" class="nav-search"> <i class="fa fa-search search-trigger"></i> <i class="fa fa-times search-close"></i> </a> </li>
+              </ul>
+            </div>
+          </div>
+          <!-- end col --> 
+          
+        </div>
+        <!-- end row --> 
+      </div>
+      <!-- end container --> 
     </div>
-  </div>
-</nav>
+    <!-- end navigation --> 
+  </nav>
+  <!-- end navbar --> 
+  
+</header>
+<!-- end navigation -->

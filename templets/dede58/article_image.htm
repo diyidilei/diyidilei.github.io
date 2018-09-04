@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta charset="utf-8">
+<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<!-- Css -->
+<link rel="stylesheet" href="/dede58/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/dede58/css/magnific-popup.css" />
+<link rel="stylesheet" href="/dede58/css/font-icons.css" />
+<link rel="stylesheet" href="/dede58/revolution/css/settings.css" />
+<link rel="stylesheet" href="/dede58/css/rev-slider.css" />
+<link rel="stylesheet" href="/dede58/css/sliders.css" />
+<link rel="stylesheet" href="/dede58/css/style.css" />
+<link rel="stylesheet" href="/dede58/css/responsive.css" />
+<link rel="stylesheet" href="/dede58/css/spacings.css" />
+<link rel="stylesheet" href="/dede58/css/animate.min.css" />
+<link rel="stylesheet" href="/dede58/css/colors/color-mint.css" />
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="/dede58/img/favicon.ico">
+<link rel="apple-touch-icon" href="/dede58/img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/dede58/img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/dede58/img/apple-touch-icon-114x114.png">
+</head>
+
+<body>
+
+<!-- Preloader -->
+<div class="loader-mask">
+  <div class="loader">
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<!-- Navigation --> 
+{dede:include filename="head.htm"/}
+<div class="main-wrapper oh"> 
+  
+  <!-- Page Title -->
+  <section class="page-title text-center" style="background-image: url(/dede58/img/portfolio_title_bg.jpg);">
+    <div class="container relative clearfix">
+      <div class="title-holder">
+        <div class="title-text">
+          <h1 class="color-white">查看内容</h1>
+          <ol class="breadcrumb">
+            {dede:field name='position'/}
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end page title --> 
+  
+  <!-- Portfolio Single -->
+  <section class="section-wrap portfolio-single">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div id="owl-slider-one-img" class="owl-carousel owl-theme oh"> {dede:field name='imgurls' alt='图片输出区'}
+            [field:pagestyle runphp='yes'] @me= (@me==3 ? '' : '');[/field:pagestyle]
+            <div class="item"> <a href='[field:linkurl/]' [field:pagestyle runphp='yes'] @me= (@me==3 ? 'class="pic"' : ''); [/field:pagestyle]> <img src='[field:imgsrc/]' id='bigimg' [field:imgwidth /] alt='[field:alttext /]' border='0' /> </a> </div>
+            [field:pagestyle runphp='yes'] @me = (@me==3 ? '' : ''); [/field:pagestyle]
+            {/dede:field} </div>
+          <!-- end owl carousel --> 
+        </div>
+        <!-- end col -->
+        
+        <div class="col-md-4">
+          <div class="portfolio-description">
+            <h2>{dede:field.title/}</h2>
+            <p>{dede:field.description runphp='yes'}
+              if(@me<>'' )@me = '
+              '.@me.'
+              ';
+              {/dede:field.description}</p>
+            <ul>
+              <li><span>时间:</span> {dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</li>
+              <li><span>栏目:</span> {dede:field name='typename'/}</li>
+              <li><span>作者:</span> {dede:field.writer/}</li>
+            </ul>
+            <a href="#com" class="btn btn-sm btn-color">查看详情</a>
+            <div class="socials-share clearfix"> <span>分享:</span>
+              <div class="social-icons"> <a href="#" class="facebook"> <i class="fa fa-weibo"></i> </a> <a href="#" class="twitter"> <i class="fa fa-weixin"></i> </a> <a href="#" class="google-plus"> <i class="fa fa-qq"></i> </a> <a href="#" class="linkedin"> <i class="fa fa-renren"></i> </a> </div>
+            </div>
+          </div>
+        </div>
+        <!-- end col --> 
+        
+      </div>
+      <!-- end row -->
+      <div style="padding-top:80px;" id="com"> {dede:field.body/} </div>
+    </div>
+    <!-- end container --> 
+  </section>
+  <!-- end portfolio single --> 
+  
+  <!-- Related Projects -->
+  <section class="section-wrap related-projects bg-light">
+    <div class="container">
+      <h4 class="heading-inline">最新图片</h4>
+      <div class="row mt-20">
+        <div id="owl-related-works" class="owl-carousel owl-theme"> {dede:arclist titlelen='40' row='6' infolen='52'}
+          <div class="item">
+            <div class="work-item hover-2">
+              <div class="work-container">
+                <div class="work-img"> <img src="[field:picname/]" alt="[field:fulltitle/]" style="height:220px"/>
+                  <div class="portfolio-overlay">
+                    <div class="project-icons"> <a href="[field:picname/]" class="lightbox-gallery"><i class="fa fa-search"></i></a> <a href="[field:arcurl/]" class="project-icon"><i class="fa fa-link"></i></a> </div>
+                  </div>
+                  <div class="work-description">
+                    <h3><a href="[field:arcurl/]" class="dark-link">[field:title/]</a></h3>
+                    <span><a href="[field:arcurl/]">[field:infos/]</a></span> </div>
+                </div>
+              </div>
+            </div>
+            <!-- end work-item --> 
+          </div>
+          <!-- end item --> 
+          {/dede:arclist} </div>
+        <!-- end owl carousel-->
+        
+        <div class="col-md-12 mt-30 text-center">
+          <div class="customNavigation"> <a class="btn prev"><i class="fa fa-angle-left"></i></a> <a class="btn next"><i class="fa fa-angle-right"></i></a> </div>
+        </div>
+      </div>
+      <!-- end row --> 
+    </div>
+    <!-- end container --> 
+  </section>
+  <!-- end related projects--> 
+  
+  <!-- Footer --> 
+  {dede:include filename="footer.htm"/} </div>
+<!-- end main-wrapper --> 
+
+<!-- jQuery Scripts --> 
+<script type="text/javascript" src="/dede58/js/jquery.min.js"></script> 
+<script type="text/javascript" src="/dede58/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="/dede58/js/plugins.js"></script> 
+<script type="text/javascript" src="/dede58/revolution/js/jquery.themepunch.tools.min.js"></script> 
+<script type="text/javascript" src="/dede58/revolution/js/jquery.themepunch.revolution.min.js"></script> 
+<script type="text/javascript" src="/dede58/js/rev-slider.js"></script> 
+<script type="text/javascript" src="/dede58/js/scripts.js"></script>
+</body>
+</html>

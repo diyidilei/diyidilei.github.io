@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<!-- HEAD -->
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+
+<!-- Mobile Metas -->
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link href="/dede58/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="/dede58/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="/dede58/plugins/et-line/et-line.css" rel="stylesheet" type="text/css"/>
+<!-- END GLOBAL MANDATORY STYLES -->
+
+<!-- BEGIN THEME PLUGINS STYLE -->
+<link href="/dede58/plugins/scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css"/>
+<link href="/dede58/plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css"/>
+<!-- END THEME PLUGINS STYLE -->
+
+<!-- BEGIN THEME STYLES -->
+<link href="/dede58/css/global.css" rel="stylesheet" type="text/css"/>
+<!-- END THEME STYLES -->
+
+<!-- THEME -->
+<link href="/dede58/css/theme/dark.css" rel="stylesheet" type="text/css"/>
+<link href="/dede58/css/theme/base.css" rel="stylesheet" type="text/css" id="style-color"/>
+<!-- END THEME -->
+
+<!-- BEGIN JQUERY -->
+<script type="text/javascript" src="/dede58/plugins/jquery.min.js"></script>
+<!-- END JQUERY -->
+
+<!-- FAVICON -->
+<link rel="shortcut icon" href="favicon.ico"/>
+<!-- END FAVICON -->
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body>
+
+<!-- WRAPPER -->
+<div class="wrapper animsition"> 
+  <!--========== HEADER TRANSPARENT ==========--> 
+  {dede:include filename="head.htm"/} 
+  <!--========== END HEADER TRANSPARENT ==========--> 
+  
+  <!--========== BREADCRUMBS V5 ==========-->
+  <section class="breadcrumbs-v5 bg-position-fixed breadcrumbs-v5-bg-img-v4">
+    <div class="container">
+      <h2 class="breadcrumbs-v5-title">{dede:field name='typename'/}</h2>
+      <span class="breadcrumbs-v5-subtitle">{dede:field name='position'/}</span> </div>
+  </section>
+  <!--========== END BREADCRUMBS V5 ==========--> 
+  
+  <!-- Heading v3 -->
+  <div class="container margin-b-80"> </div>
+  <!-- End Heading v3 --> 
+  
+  <!-- Blog Teaser v2 -->
+  <div class="container">
+    <div class="row margin-b-30"> {dede:list pagesize='9' titlelen='40' infolen='120'}
+      <div class="col-md-4 md-margin-b-30 margin-b-30"> 
+        <!-- Blog Teaser v2 -->
+        <article class="blog-teaser-v2"> <img class="blog-teaser-v2-img img-responsive" src="[field:picname/]" alt="[field:fulltitle/]" style="height:250px; width:100%">
+          <div class="blog-teaser-v2-overlay">
+            <div class="blog-teaser-v2-content">
+              <div class="blog-teaser-v2-subtitle">[field:pubdate function="MyDate('Y-m-d',@me)"/]</div>
+              <h2 class="blog-teaser-v2-title">[field:title/]</h2>
+              <div class="blog-teaser-v2-media">
+                <div class="blog-teaser-v2-media-content">
+                  <h4 class="blog-teaser-v2-author-name">by [field:writer/]</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="blog-teaser-v2-link" href="[field:arcurl/]"></a> </article>
+        <!-- End Blog Teaser v2 --> 
+      </div>
+      {/dede:list} </div>
+    <!--// end row --> 
+  </div>
+  <!-- End Blog Teaser v2 --> 
+  
+  <!-- Paginations v3 -->
+  <div class="container">
+    <div class="paginations-v3 text-center margin-b-60">
+      <div class="dede_pages">
+        <ul class="pagelist">
+          {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+        </ul>
+      </div>
+      <!-- /pages --> 
+    </div>
+  </div>
+  <!-- End Paginations v3 --> 
+  <!--========== END PAGE CONTENT ==========--> 
+  
+  <!--========== FOOTER ==========--> 
+  {dede:include filename="footer.htm"/} 
+  <!--========== END FOOTER ==========--> 
+</div>
+<!-- END WRAPPER --> 
+
+<!-- Sidebar Content Overlay -->
+<div class="sidebar-content-overlay"></div>
+<!-- End Sidebar Content Overlay --> 
+
+<!-- Back To Top --> 
+<a href="javascript:void(0);" class="js-back-to-top back-to-top-theme"></a> 
+<!-- End Back To Top --> 
+
+<!--========== JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) ==========--> 
+<!-- BEGIN CORE PLUGINS --> 
+<!--[if lt IE 9]>
+<script src="/dede58/plugins/html5shiv.js"></script>
+<script src="/dede58/plugins/respond.min.js"></script>
+<![endif]--> 
+<script type="text/javascript" src="/dede58/plugins/jquery.migrate.min.js"></script> 
+<script type="text/javascript" src="/dede58/plugins/bootstrap/js/bootstrap.min.js"></script> 
+<!-- END CORE PLUGINS --> 
+
+<!-- BEGIN PAGE LEVEL PLUGINS --> 
+<script type="text/javascript" src="/dede58/plugins/jquery.back-to-top.js"></script> 
+<script type="text/javascript" src="/dede58/plugins/jquery.smooth-scroll.js"></script> 
+<script type="text/javascript" src="/dede58/plugins/jquery.animsition.min.js"></script> 
+<script type="text/javascript" src="/dede58/plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script> 
+<script type="text/javascript" src="/dede58/plugins/magnific-popup/jquery.magnific-popup.min.js"></script> 
+<!-- END PAGE LEVEL PLUGINS --> 
+
+<!-- BEGIN PAGE LEVEL SCRIPTS --> 
+<script type="text/javascript" src="/dede58/scripts/app.js"></script> 
+<script type="text/javascript" src="/dede58/scripts/components/header-sticky.js"></script> 
+<script type="text/javascript" src="/dede58/scripts/components/animsition.js"></script> 
+<script type="text/javascript" src="/dede58/scripts/components/scrollbar.js"></script> 
+<script type="text/javascript" src="/dede58/scripts/components/form-modal.js"></script> 
+<script type="text/javascript" src="/dede58/scripts/components/magnific-popup.js"></script> 
+<!-- END PAGE LEVEL SCRIPTS --> 
+<!--========== END JAVASCRIPTS ==========-->
+</body>
+<!-- END BODY -->
+
+</html>

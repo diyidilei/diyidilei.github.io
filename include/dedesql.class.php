@@ -588,8 +588,6 @@ EOT;
 $arrs1 = array();
 $arrs2 = array();
 
-
-
 //特殊操作
 if(isset($GLOBALS['arrs1']))
 {
@@ -667,9 +665,17 @@ if (!function_exists('CheckSql'))
         }
         $clean .= substr($db_string, $old_pos);
         $clean = trim(strtolower(preg_replace(array('~\s+~s' ), array(' '), $clean)));
+        
+        if (strpos($clean, '@') !== FALSE  OR strpos($clean,'char(')!== FALSE OR strpos($clean,'"')!== FALSE 
+        OR strpos($clean,'$s$$s$')!== FALSE)
+        {
+            $fail = TRUE;
+            if(preg_match("#^create table#i",$clean)) $fail = FALSE;
+            $error="unusual character";
+        }
 
         //老版本的Mysql并不支持union，常用的程序里也不使用union，但是一些黑客使用它，所以检查它
-        if (strpos($clean, 'union') !== FALSE && preg_match('~(^|[^a-z])union($|[^[a-z])~s', $clean) != 0)
+        if (strpos($clean, 'union') !== FALSE && preg_match('~(^|[^a-z])union($|[^[a-z])~is', $clean) != 0)
         {
             $fail = TRUE;
             $error="union detect";
@@ -683,29 +689,29 @@ if (!function_exists('CheckSql'))
         }
 
         //这些函数不会被使用，但是黑客会用它来操作文件，down掉数据库
-        elseif (strpos($clean, 'sleep') !== FALSE && preg_match('~(^|[^a-z])sleep($|[^[a-z])~s', $clean) != 0)
+        elseif (strpos($clean, 'sleep') !== FALSE && preg_match('~(^|[^a-z])sleep($|[^[a-z])~is', $clean) != 0)
         {
             $fail = TRUE;
             $error="slown down detect";
         }
-        elseif (strpos($clean, 'benchmark') !== FALSE && preg_match('~(^|[^a-z])benchmark($|[^[a-z])~s', $clean) != 0)
+        elseif (strpos($clean, 'benchmark') !== FALSE && preg_match('~(^|[^a-z])benchmark($|[^[a-z])~is', $clean) != 0)
         {
             $fail = TRUE;
             $error="slown down detect";
         }
-        elseif (strpos($clean, 'load_file') !== FALSE && preg_match('~(^|[^a-z])load_file($|[^[a-z])~s', $clean) != 0)
+        elseif (strpos($clean, 'load_file') !== FALSE && preg_match('~(^|[^a-z])load_file($|[^[a-z])~is', $clean) != 0)
         {
             $fail = TRUE;
             $error="file fun detect";
         }
-        elseif (strpos($clean, 'into outfile') !== FALSE && preg_match('~(^|[^a-z])into\s+outfile($|[^[a-z])~s', $clean) != 0)
+        elseif (strpos($clean, 'into outfile') !== FALSE && preg_match('~(^|[^a-z])into\s+outfile($|[^[a-z])~is', $clean) != 0)
         {
             $fail = TRUE;
             $error="file fun detect";
         }
 
         //老版本的MYSQL不支持子查询，我们的程序里可能也用得少，但是黑客可以使用它来查询数据库敏感信息
-        elseif (preg_match('~\([^)]*?select~s', $clean) != 0)
+        elseif (preg_match('~\([^)]*?select~is', $clean) != 0)
         {
             $fail = TRUE;
             $error="sub select detect";

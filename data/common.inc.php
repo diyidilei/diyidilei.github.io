@@ -1,7 +1,7 @@
 <?php
 //数据库连接信息
 $cfg_dbhost = 'localhost';
-$cfg_dbname = 't34';
+$cfg_dbname = 't51';
 $cfg_dbuser = 'root';
 $cfg_dbpwd = 'root';
 $cfg_dbprefix = 'dede_';

@@ -1,0 +1,18 @@
+INSERT INTO `dede_search_keywords` VALUES('1','asdfasfsdfs','asdfasfsdfs asdfasfsdfs','3','0','1473423029','0','0');
+INSERT INTO `dede_search_keywords` VALUES('2','asfdasdf','asfdasdf asfdasdf','3','0','1473423116','0','0');
+INSERT INTO `dede_search_keywords` VALUES('3','adfasdfasd','adfasdfasd adfasdfasd','3','0','1473423380','0','0');
+INSERT INTO `dede_search_keywords` VALUES('4','adsfasdf','adsfasdf adsfasdf','1','0','1473423189','0','0');
+INSERT INTO `dede_search_keywords` VALUES('5','百度','百度 百度','17','8','1480415940','0','0');
+INSERT INTO `dede_search_keywords` VALUES('6','asdfas','asdfas','1','0','1473502904','0','0');
+INSERT INTO `dede_search_keywords` VALUES('7','阿萨德发生的发生大幅','阿萨德发生的发生大幅 发生 大幅 生的 萨德','1','0','1475921849','0','0');
+INSERT INTO `dede_search_keywords` VALUES('8','阿斯顿发生短发是的','阿斯顿发生短发是的 发生 是的 短发 阿斯顿','1','0','1475921900','0','0');
+INSERT INTO `dede_search_keywords` VALUES('9','asfdfa','asfdfa','2','0','1475921947','0','0');
+INSERT INTO `dede_search_keywords` VALUES('10','asfdfa阿斯蒂芬','asfdfa阿斯蒂芬 asfdfa 斯蒂芬','1','0','1475922042','0','0');
+INSERT INTO `dede_search_keywords` VALUES('11','魔','魔','5','8','1475922266','0','0');
+INSERT INTO `dede_search_keywords` VALUES('12','123','123','1','0','1479039322','0','0');
+INSERT INTO `dede_search_keywords` VALUES('13','sdafsafasdf','sdafsafasdf sdafsafasdf','1','0','1479039536','0','0');
+INSERT INTO `dede_search_keywords` VALUES('14','asdfsadf','asdfsadf asdfsadf','1','0','1479039895','0','0');
+INSERT INTO `dede_search_keywords` VALUES('15','asfsdf','asfsdf','1','0','1480248288','0','0');
+INSERT INTO `dede_search_keywords` VALUES('16','阿斯顿发生地方','阿斯顿发生地方 发生 地方 阿斯顿','2','0','1480415978','0','0');
+INSERT INTO `dede_search_keywords` VALUES('17','asdfasdfasf','asdfasdfasf asdfasdfasf','2','0','1480423929','0','0');
+INSERT INTO `dede_search_keywords` VALUES('18','asdfasdf','asdfasdf asdfasdf','1','0','1480423934','0','0');

@@ -1,3 +1,0 @@
-INSERT INTO `dede_flink` VALUES('12','1','http://www.dede58.com','织梦模板','','','','1467895329','1','2');
-INSERT INTO `dede_flink` VALUES('13','1','http://www.adashuo.com/','响应式织梦模板','','','','1467895337','1','2');
-INSERT INTO `dede_flink` VALUES('14','1','http://www.dede58.com/host/','织梦主机','','','','1467895347','1','2');

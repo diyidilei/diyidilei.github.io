@@ -226,10 +226,19 @@ class ListView
         $tempfile = $GLOBALS['cfg_basedir'].$GLOBALS['cfg_templets_dir']."/".$this->TypeLink->TypeInfos['templist'];
         $tempfile = str_replace("{tid}", $this->TypeID, $tempfile);
         $tempfile = str_replace("{cid}", $this->ChannelUnit->ChannelInfos['nid'], $tempfile);
+        if ( defined('DEDEMOB') )
+        {
+            $tempfile =str_replace('.htm','_m.htm',$tempfile);
+        }
         if(!file_exists($tempfile))
         {
             $tempfile = $GLOBALS['cfg_basedir'].$GLOBALS['cfg_templets_dir']."/".$GLOBALS['cfg_df_style']."/list_default.htm";
+            if ( defined('DEDEMOB') )
+            {
+                $tempfile =str_replace('.htm','_m.htm',$tempfile);
+            }
         }
+        
         if(!file_exists($tempfile)||!is_file($tempfile))
         {
             echo "模板文件不存在，无法解析文档！";
@@ -290,7 +299,7 @@ class ListView
             return $reurl;
         }
 
-        $this->CountRecord();
+        if(empty($this->TotalResult)) $this->CountRecord();
         //初步给固定值的标记赋值
         $this->ParseTempletsFirst();
         $totalpage = ceil($this->TotalResult/$this->PageSize);
@@ -391,9 +400,17 @@ class ListView
             $tempfile = str_replace("{tid}",$this->TypeID,$this->Fields['tempindex']);
             $tempfile = str_replace("{cid}",$this->ChannelUnit->ChannelInfos['nid'],$tempfile);
             $tempfile = $tmpdir."/".$tempfile;
+            if ( defined('DEDEMOB') )
+            {
+                $tempfile =str_replace('.htm','_m.htm',$tempfile);
+            }
             if(!file_exists($tempfile))
             {
                 $tempfile = $tmpdir."/".$GLOBALS['cfg_df_style']."/index_default.htm";
+                if ( defined('DEDEMOB') )
+                {
+                    $tempfile =str_replace('.htm','_m.htm',$tempfile);
+                }
             }
             $this->dtp->LoadTemplate($tempfile);
         }
@@ -419,9 +436,17 @@ class ListView
             $tempfile = str_replace("{tid}",$this->TypeID,$this->Fields['tempindex']);
             $tempfile = str_replace("{cid}",$this->ChannelUnit->ChannelInfos['nid'],$tempfile);
             $tempfile = $tmpdir."/".$tempfile;
+            if ( defined('DEDEMOB') )
+            {
+                $tempfile =str_replace('.htm','_m.htm',$tempfile);
+            }
             if(!file_exists($tempfile))
             {
                 $tempfile = $tmpdir."/".$GLOBALS['cfg_df_style']."/index_default.htm";
+                if ( defined('DEDEMOB') )
+                {
+                    $tempfile =str_replace('.htm','_m.htm',$tempfile);
+                }
             }
             $this->PartView->SetTemplet($tempfile);
         }
@@ -489,9 +514,17 @@ class ListView
             $tempfile = str_replace("{tid}",$this->TypeID,$this->Fields['tempindex']);
             $tempfile = str_replace("{cid}",$this->ChannelUnit->ChannelInfos['nid'],$tempfile);
             $tempfile = $tmpdir."/".$tempfile;
+            if ( defined('DEDEMOB') )
+            {
+                $tempfile =str_replace('.htm','_m.htm',$tempfile);
+            }
             if(!file_exists($tempfile))
             {
                 $tempfile = $tmpdir."/".$GLOBALS['cfg_df_style']."/index_default.htm";
+                if ( defined('DEDEMOB') )
+                {
+                    $tempfile =str_replace('.htm','_m.htm',$tempfile);
+                }
             }
             $this->PartView->SetTemplet($tempfile);
         }
@@ -977,7 +1010,7 @@ class ListView
         }
         else
         {
-            $indexpage="<li><a>首页</a></li>\r\n";
+            $indexpage="<li>首页</li>\r\n";
         }
 
         //下一页,未页的链接
@@ -988,7 +1021,7 @@ class ListView
         }
         else
         {
-            $endpage="<li><a>末页</a></li>\r\n";
+            $endpage="<li>末页</li>\r\n";
         }
 
         //option链接
@@ -1036,7 +1069,7 @@ class ListView
         {
             if($j==$this->PageNo)
             {
-                $listdd.= "<li class=\"thisclass\"><a>$j</a></li>\r\n";
+                $listdd.= "<li class=\"thisclass\">$j</li>\r\n";
             }
             else
             {
